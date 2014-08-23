@@ -3,6 +3,11 @@ callback([
   {
     "text": "Hello World",
     "href": "/personal/first-commit"
+  } ,
+
+  {
+    "text": "Data Science with Functional JavaScript",
+    "href": "/javascript/functional-javascript-and-data-science"
   } 
 
 ])
