@@ -1,7 +1,7 @@
 title:            Coding Star
 description:      "An Engineer's Diary"
 logo:             logo.png
-disqus_shortname: davidniris
+disqus_shortname: daviddao
 share:            true
 readtime:			    true
 wpm:				      200
@@ -24,7 +24,20 @@ owner:
   facebook:       profile.daviddao
   github:         daviddao  
   # For Google Authorship https://plus.google.com/authorship
-  google_plus:    
+  google_plus:   
+
+owner2:
+  name:           Iris Shih
+  avatar:         irisshih.jpg
+  email:          iris.cshih@gmail.com
+  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
+  description:    Awesome Girl, Awesome Life
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        iriscshih
+  facebook:       
+  github:         iriscshih  
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:  
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   

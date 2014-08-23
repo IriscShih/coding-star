@@ -66,7 +66,8 @@
 <div class=cf></div>
 {% if site.share %}{% include share.html %}{% endif %}
 <div class=cf></div>
-{% include signoff.html %}
+{% if page.david == true %}{% include signoff_david.html %}{% endif %}
+{% if page.iris == true %}{% include signoff_iris.html %}{% endif %}
 <div class=cf></div>
 {% if site.disqus_shortname and page.comments == true %}
 <section class="summer-disqus row">

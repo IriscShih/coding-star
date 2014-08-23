@@ -7,13 +7,12 @@ categories: personal
 tags: 
   - blogging
   - jekyll
-imagefeature: "website-speed.jpg"
-imagecredit: spreadeffect.com
-imagecreditlink: "http://www.spreadeffect.com/blog/improve-website-speed/"
 comments: false
 mathjax: null
 featured: true
 published: true
+david: true
+iris: true
 ---
 
 >&quot;The beginning is the most important part of the work.&quot;
