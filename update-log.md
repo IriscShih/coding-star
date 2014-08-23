@@ -23,6 +23,6 @@ comments: false
 <script>
 $(function() {
 	$('#github-commits').githubInfoWidget(
-		{ user: 'iriscshih', repo: 'coding-star', branch: 'master', last: 30, limitMessageTo: 30 });
+		{ user: 'iriscshih', repo: 'coding-star', branch: 'gh-pages', last: 30, limitMessageTo: 30 });
 });
 </script>  
