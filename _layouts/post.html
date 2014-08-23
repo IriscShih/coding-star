@@ -40,7 +40,7 @@
 {% if page.imagefeature %}
 <div class="summer-post-title bg-check">
 <h1 itemprop=name>{% if page.featured %}<i class="fa fa-star-half-o fa-spin"></i>&nbsp;{% endif %}{{ page.title }}</h1>
-<p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name>{{ site.owner.name }}</strong></span> &#8212; {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}on {% for tag in page.tags %}<span itemprop=articleSection><a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" title="Posts tagged with {{ tag }}" rel=tag>{{ tag }}</a></span>{% unless forloop.last %}&comma;&nbsp;{% endunless %}{% endfor %}{% endif %} <strong><time datetime="{{ page.date | date_to_xmlschema }}" itemprop=datePublished>{{ page.date | date: "%d %b %Y" }}</time></strong></p>
+<p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name>{%if page.david == true%}{{ site.owner.name }}{% endif%} {%if page.iris == true%}{{ site.owner2.name }}{% endif%}</strong></span> &#8212; {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}on {% for tag in page.tags %}<span itemprop=articleSection><a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" title="Posts tagged with {{ tag }}" rel=tag>{{ tag }}</a></span>{% unless forloop.last %}&comma;&nbsp;{% endunless %}{% endfor %}{% endif %} <strong><time datetime="{{ page.date | date_to_xmlschema }}" itemprop=datePublished>{{ page.date | date: "%d %b %Y" }}</time></strong></p>
 {% if page.description %}<strong><i>&quot;{{ page.description }}&quot;</i></strong>{% endif %}
 </div>
 <div class=bg-img></div>
@@ -52,7 +52,7 @@
 <div class="small-12 columns">
 <div class=summer-post-meta-simple>
 <h1 itemprop=name>{% if page.featured %}<i class="fa fa-star-half-o fa-spin"></i>&nbsp;{% endif %}{{ page.title }}</h1>
-<p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name>{{ site.owner.name }}</strong></span> &#8212; {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}on {% for tag in page.tags %}<span itemprop=articleSection><a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" title="Posts tagged with {{ tag }}" rel=tag>{{ tag }}</a></span>{% unless forloop.last %}&comma;&nbsp;{% endunless %}{% endfor %}{% endif %} <strong><time datetime="{{ page.date | date_to_xmlschema }}" itemprop=datePublished>{{ page.date | date: "%d %b %Y" }}</time></strong></p>
+<p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name>{%if page.david == true%}{{ site.owner.name }}{% endif%} {%if page.iris == true%}{{ site.owner2.name }}{% endif%}</strong></span> &#8212; {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}on {% for tag in page.tags %}<span itemprop=articleSection><a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" title="Posts tagged with {{ tag }}" rel=tag>{{ tag }}</a></span>{% unless forloop.last %}&comma;&nbsp;{% endunless %}{% endfor %}{% endif %} <strong><time datetime="{{ page.date | date_to_xmlschema }}" itemprop=datePublished>{{ page.date | date: "%d %b %Y" }}</time></strong></p>
 {% if page.description %}<strong><i>&quot;{{ page.description }}&quot;</i></strong>{% endif %}
 </div>
 </div>
@@ -79,7 +79,8 @@
 </section>
 {% endif %}
 <div class=cf></div>
-{% include footer.html %}
+{% if page.david == false %}{% include footer_iris.html %}{% else %}
+{% include footer.html %}{% endif %}
 </main>
 {% include scripts.html %}
 </body>

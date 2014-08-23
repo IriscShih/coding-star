@@ -1,12 +1,7 @@
 callback([
 
   {
-    "text": "Installing Jekyll on Windows",
-    "href": "/tutorial/installing-jekyll-on-windows"
-  } ,
-
-  {
-    "text": "First Commit",
+    "text": "Hello World",
     "href": "/personal/first-commit"
   } 
 
