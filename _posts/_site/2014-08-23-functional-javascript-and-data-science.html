@@ -1,0 +1,73 @@
+<p>Chrome’s developer tools and JavaScript make it easy to scrape data from web pages. I’ll demonstrate this by grabbing a list of <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO country codes, country names and country ids</a> from Wikipedia.</p>
+
+<h2 id="console-basics">Console Basics</h2>
+
+<p>Before we begin, some general tips with working with the console (OSX):</p>
+
+<ul>
+  <li>Press up and down to navigate command history. This is great for iteratively building up a pipeline</li>
+  <li>Press alt and left and right to skip forwards/backwards one word</li>
+  <li>Cmd + k to clear the console</li>
+  <li>Ctrl + e to skip to end, Ctrl + a to skip to the start</li>
+  <li>Ctrl + enter to add a new line without running the current command</li>
+</ul>
+
+<h2 id="getting-the-data">Getting the Data</h2>
+
+<p>First off, we want to find the element that contains our data. Using the elements panel and right click -&gt; ‘Inspect element’, we highlight the element containing our data.</p>
+
+<p><img src="/images/inspect.png" alt="Inspect Chrome Dev Tool" /></p>
+
+<h2 id="moving-to-the-console">Moving to the Console</h2>
+
+<p>Next we move to the console. Chrome places the element you inspected most recently in the <code>$0</code> variable, the next most recent on <code>$1</code> and so on. It also aliases querySelectorAll as <code>$$(css [,startNode])</code>, so we can use these together to check out the rows in our table:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&gt;</span> <span class="nx">$$</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">,</span><span class="nx">$0</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">innerHTML</span>
+<span class="s2">&quot;&lt;td&gt;&lt;a href=&quot;</span><span class="o">/</span><span class="nx">wiki</span><span class="o">/</span><span class="nx">Afghanistan</span><span class="s2">&quot; title=&quot;</span><span class="nx">Afghanistan</span><span class="s2">&quot;&gt;Afghanistan&lt;/a&gt;&lt;/td&gt;</span>
+<span class="s2">&lt;td&gt;&lt;a href=&quot;</span><span class="o">/</span><span class="nx">wiki</span><span class="o">/</span><span class="nx">ISO_3166</span><span class="o">-</span><span class="mi">1</span><span class="nx">_alpha</span><span class="o">-</span><span class="mi">2</span><span class="err">#</span><span class="nx">AF</span><span class="s2">&quot; title=&quot;</span><span class="nx">ISO</span> <span class="mi">3166</span><span class="o">-</span><span class="mi">1</span> <span class="nx">alpha</span><span class="o">-</span><span class="mi">2</span><span class="s2">&quot;&gt;&lt;tt&gt;AF&lt;/tt&gt;&lt;/a&gt;&lt;/td&gt;</span>
+<span class="s2">&lt;td&gt;&lt;tt&gt;AFG&lt;/tt&gt;&lt;/td&gt;</span>
+<span class="s2">&lt;td&gt;&lt;tt&gt;004&lt;/tt&gt;&lt;/td&gt;</span>
+<span class="s2">&lt;td&gt;&lt;a href=&quot;</span><span class="o">/</span><span class="nx">wiki</span><span class="o">/</span><span class="nx">ISO_3166</span><span class="o">-</span><span class="mi">2</span><span class="o">:</span><span class="nx">AF</span><span class="s2">&quot; title=&quot;</span><span class="nx">ISO</span> <span class="mi">3166</span><span class="o">-</span><span class="mi">2</span><span class="o">:</span><span class="nx">AF</span><span class="s2">&quot;&gt;ISO 3166-2:AF&lt;/a&gt;&lt;/td&gt;&quot;</span></code></pre></div>
+
+<p>Great! Looks like some useful data in that HTML. I normally slap [0] at the end of the pipeline to get this insight into what’s being produced.</p>
+
+<p>To grab the data from the HTML in another one-liner we can use one of the Array additions - map. Unforunately <code>$$</code> returns a NodeList which is array-like but not an array. To work around this we grab <code>[].map</code> and <code>.call</code> it on the node list.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&gt;</span> <span class="p">[].</span><span class="nx">map</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">$$</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">,</span><span class="nx">$0</span><span class="p">),</span><span class="nx">mapper</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span></code></pre></div>
+
+<p>We’ll need to define mapper() - a function that takes each element in turn and returns the data we want as a structured object. In this case we want the contents of the 1st and 2nd nodes, so:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&gt;</span> <span class="kd">function</span> <span class="nx">mapper</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="nx">country</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">,</span><span class="nx">el</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">innerText</span><span class="p">,</span>
+      <span class="nx">code</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">,</span><span class="nx">el</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">innerText</span><span class="p">,</span>
+      <span class="nx">id</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">,</span><span class="nx">el</span><span class="p">)[</span><span class="mi">3</span><span class="p">].</span><span class="nx">innerText</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="o">&gt;</span> <span class="p">[].</span><span class="nx">map</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">$$</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">,</span><span class="nx">$0</span><span class="p">),</span><span class="nx">mapper</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">Object</span> <span class="p">{</span><span class="nx">country</span><span class="o">:</span> <span class="s2">&quot;Afghanistan&quot;</span><span class="p">,</span> <span class="nx">code</span><span class="o">:</span> <span class="s2">&quot;AF&quot;</span><span class="p">,</span> <span class="nx">id</span><span class="o">:</span> <span class="s2">&quot;004&quot;</span><span class="p">}</span></code></pre></div>
+
+<p>Excellent - just what we want. Now we have an array full of tasty data, but how do we get it out?</p>
+
+<p>Chrome saves the day again with <code>copy()</code>, giving us the data-clipboard bridge we’ve always wanted. Since we want useful data we’ll <code>JSON.stringify</code> the data first, and our completed pipeline looks like:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">map</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">$$</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">,</span><span class="nx">$0</span><span class="p">),</span><span class="nx">mapper</span><span class="p">);</span>
+<span class="o">&gt;</span> <span class="nx">copy</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span></code></pre></div>
+
+<p>What does our final data look like?</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">[{</span><span class="s2">&quot;country&quot;</span><span class="o">:</span><span class="s2">&quot;Afghanistan&quot;</span><span class="p">,</span><span class="s2">&quot;code&quot;</span><span class="o">:</span><span class="s2">&quot;AF&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="s2">&quot;004&quot;</span><span class="p">},{</span><span class="s2">&quot;country&quot;</span><span class="o">:</span><span class="s2">&quot;Åland Islands&quot;</span><span class="p">,</span><span class="s2">&quot;code&quot;</span><span class="o">:</span><span class="s2">&quot;AX&quot;</span><span class="p">,</span><span class="nx">id</span><span class="o">:</span><span class="s2">&quot;...&quot;</span><span class="p">},</span><span class="cm">/* ... */</span><span class="p">,{</span><span class="s2">&quot;country&quot;</span><span class="o">:</span><span class="s2">&quot;Zimbabwe&quot;</span><span class="p">,</span><span class="s2">&quot;code&quot;</span><span class="o">:</span><span class="s2">&quot;ZW&quot;</span><span class="p">,</span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="s2">&quot;...&quot;</span><span class="p">}]</span>
+<span class="nx">Here</span><span class="err">&#39;</span><span class="nx">s</span> <span class="nx">the</span> <span class="nx">whole</span> <span class="nx">pipeline</span> <span class="nx">built</span> <span class="nx">up</span> <span class="nx">bit</span> <span class="nx">by</span> <span class="nx">bit</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">nodes</span> <span class="o">=</span> <span class="nx">$$</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">,</span><span class="nx">$0</span><span class="p">);</span>
+<span class="o">&gt;</span> <span class="kd">function</span> <span class="nx">mapper</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="nx">country</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">,</span><span class="nx">el</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">innerText</span><span class="p">,</span>
+      <span class="nx">code</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">,</span><span class="nx">el</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">innerText</span><span class="p">,</span>
+      <span class="nx">id</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">,</span><span class="nx">el</span><span class="p">)[</span><span class="mi">3</span><span class="p">].</span><span class="nx">innerText</span>    
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="o">&gt;</span> <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">map</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">nodes</span><span class="p">,</span><span class="nx">mapper</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="nx">copy</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span></code></pre></div>
+
+<p>That’s it. Pretty sweet right? In the following, I will dig deeper into <code>map</code> and <code>reduce</code> in JavaScript.</p>
