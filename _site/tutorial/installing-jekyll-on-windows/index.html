@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>INSTALLING JEKYLL ON WINDOWS | CODING STAR</title>
+<meta name="description" content="Simple 10 step method to get started with Jekyll">
+<meta name="keywords" content="Jekyll, Installation">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:title" content="Installing Jekyll on Windows">
+<meta name="twitter:description" content="Simple 10 step method to get started with Jekyll">
+<meta name="twitter:creator" content="@david_dao_">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Installing Jekyll on Windows">
+<meta property="og:description" content="Simple 10 step method to get started with Jekyll">
+<meta property="og:url" content="/tutorial/installing-jekyll-on-windows">
+<meta property="og:site_name" content="Coding Star">
+<meta property="og:image" content="/images/">
+
+
+
+<link rel="canonical" href="/tutorial/installing-jekyll-on-windows">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Coding Star Feed">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/css/vendor/normalize-production.css">
+<link rel="stylesheet" href="/assets/css/vendor/foundation.min.css">
+
+<link rel="stylesheet" href="/assets/css/style-production.css">
+<link rel="stylesheet" href="/assets/css/post-production.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>/*<![CDATA[*/window.jQuery||document.write('<script src="/assets/js/vendor/jquery-1.11.1.min.js"><\/script>');/*]]>*/</script>
+
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+<body class=post-template itemscope itemtype=http://schema.org/WebPage>
+
+<main id=summer-post-container-simple class=summer-post-container-simple role=main itemscope itemtype=http://schema.org/Article>
+<header class=summer-post-header-simple>
+<div class=summer-post-menu-header-simple>
+
+
+<a class=summer-blog-logo href=""><img src="/images/logo.png" alt="Blog Logo" /></a>
+
+<div class=summer-blog-menu>
+<div class="summer-mobile-menu show-for-small">
+<a href=#><i class="fa fa-bars"></i></a>
+</div>
+<ul class=summer-menu>
+<li class="summer-mobile-close-btn show-for-small text-right">
+<a href=#><i class="fa fa-times"></i></a>
+</li>
+
+<li>
+<a href="/">Home</a>
+ </li>
+
+<li>
+<a href="/featured">Featured Posts</a>
+ </li>
+
+<li>
+<a href="/categories">Categories</a>
+ </li>
+
+<li>
+<a href="/about">About</a>
+ </li>
+
+</ul>
+</div>
+</div>
+
+<div class="summer-post-title-simple row">
+<div class="small-12 columns">
+<div class=summer-post-meta-simple>
+<h1 itemprop=name>Installing Jekyll on Windows</h1>
+<p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name>David Dao</strong></span> &#8212; on <span itemprop=articleSection><a href="/tags/index.html#Jekyll" title="Posts tagged with Jekyll" rel=tag>Jekyll</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#Installation" title="Posts tagged with Installation" rel=tag>Installation</a></span> <strong><time datetime="2013-12-31T00:00:00+01:00" itemprop=datePublished>31 Dec 2013</time></strong></p>
+<strong><i>&quot;Simple 10 step method to get started with Jekyll&quot;</i></strong>
+</div>
+</div>
+</div>
+</header>
+
+<article class="summer-post-content post tag-simple" itemscope itemtype=http://schema.org/BlogPosting>
+<div itemprop=articleBody><p>In this tutorial, I will show you how you can install and get started with <a href="http://jekyllrb.com/">Jekyll</a> on <a href="http://windows.microsoft.com/en-us/windows/home">Windows platform</a> in 10 easy steps. While Jekyll itself is very easy to get started with, it has several dependencies which needed to be installed in order for it to work properly. The process of installing these dependencies can be a little frustrating on any system, and it can be a tad bit more frustrating if you own a Windows PC. In this article, I will provide step-by-step details about installing Jekyll on windows and all its dependencies properly and will try to elaborate on the errors that one might encounter during the steps.</p>
+
+<section>
+  <header>
+    <h2>Contents</h2>
+  </header>
+<div id="drawer">
+<ul id="markdown-toc">
+  <li><a href="#step-1-installing-ruby">Step 1: Installing Ruby</a></li>
+  <li><a href="#step-2-installing-jekyll-gem">Step 2: Installing Jekyll Gem</a></li>
+  <li><a href="#step-3-enabling-syntax-highlighting">Step 3: Enabling Syntax Highlighting</a>    <ul>
+      <li><a href="#step-4-re-installing-pygmentsrb">Step 4: Re-installing Pygments.rb</a></li>
+    </ul>
+  </li>
+  <li><a href="#step-5-initializing-a-new-blog">Step 5: Initializing a new blog</a></li>
+  <li><a href="#step-6-knowing-the-configyml-file">Step 6: Knowing the _config.yml file</a></li>
+  <li><a href="#step-7-knowing-the-jekyll-folder-structure">Step 7: Knowing the Jekyll folder structure</a></li>
+  <li><a href="#step-8-adding-new-postsmodifying-posts">Step 8: Adding new posts/Modifying posts</a></li>
+  <li><a href="#step-9-compiling-the-site-for-deployment">Step 9: Compiling the site for deployment</a></li>
+  <li><a href="#step-10-deployment">Step 10: Deployment</a></li>
+</ul>
+
+  </div>
+</section>
+
+<h2 id="step-1-installing-ruby">Step 1: Installing Ruby</h2>
+
+<p><em><a href="https://rubygems.org/gems/jekyll">Jekyll is a Ruby-Gem.</a></em> So obviously you’d need Ruby to be installed in your Windows PC, you’d also need the Ruby DevKit in your system too. There is an easy way to install Ruby on Windows, its called the RubyInstaller. So head over to <strong><a href="http://rubyinstaller.org/downloads/">RubyInstaller for Windows</a></strong> webpage and grab of copy of the latest Ruby. Select x86 or x64 based on your PC configuration. Then scroll down and to find the <strong><a href="http://rubyinstaller.org/downloads/">corresponding DevKit</a></strong> for your Ruby and download that too. Double click on the RubyInstaller to begin installing Ruby. There are a few caveats here. The directory name (<em>string) should not have any spaces(</em>whitespaces), though numbers, dash and underscores are acceptable. Also check Add Ruby to Path to make your life easier. Finish installing Ruby, then click on the DevKit extractor. Extract it to some convenient location like <code>~ C:\</code>. Finally open up Command Prompt by pressing (<i class="fa fa-windows"></i> + R), type cmd, hit <strong><em>ENTER</em></strong> and change your directory to the extracted DevKit folder. </p>
+
+<p><img src="/images/startplusr.jpg" alt="" /></p>
+
+<p>Typing the following commands will initialize the Ruby Installation:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>ruby dk.rb init
+~ <span class="nv">$ </span>ruby dk.rb install</code></pre></div>
+
+<h2 id="step-2-installing-jekyll-gem">Step 2: Installing Jekyll Gem</h2>
+
+<p>Now that Ruby is installed, you can proceed to install Jekyll Gem. To do so, run the following Command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>gem install jekyll</code></pre></div>
+
+<p>Wait for a while for the latest version of Jekyll to get downloaded and installed. Your command window might not show anything for upto half a minute as the Ruby-Gem server might be busy. Have a little patience, soon the download will start and Jekyll will download itself and all of the required gems in your system.</p>
+
+<h2 id="step-3-enabling-syntax-highlighting">Step 3: Enabling Syntax Highlighting</h2>
+
+<p>If you’re an engineer or a mathematician, occasionally you’d want to post code snippets in your blog. Jekyll utilizes a Gem called Pygments.rb to highlight your code snippets, which does not require any Javascript or client-side computation to show the Syntax Highlighting. Pygments.rb is dependent on Python. If you don’t have Python installed in your system, go the <a href="https://www.python.org/download/">Python Download page</a>, and download Python 2.7.x. Install it and make sure it has been added to the PATH. If you opt for not using syntax highlighting or use client-side implementation, make sure to turn pygments off by explicitly calling it off in the _config.yml file.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">pygments</span><span class="p">:</span> <span class="kp">false</span></code></pre></div>
+
+<h3 id="step-4-re-installing-pygmentsrb">Step 4: Re-installing Pygments.rb</h3>
+
+<p>The latest version of Pygments.rb(0.5.4) seems to have trouble when compiling with Jekyll. Now the latest version of Pygments.rb will be automatically downloaded in <a href="#step-2-installing-jekyll-gem">Step 2</a> along with Jekyll. To revert back to the last known stable version of Pygments.rb(0.5.0) simply run the following commands:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>gem uninstall pygments.rb
+~ <span class="nv">$ </span>gem install pygments.rb --version<span class="o">(=</span><span class="s2">&quot;0.5.0&quot;</span><span class="o">)</span></code></pre></div>
+
+<h2 id="step-5-initializing-a-new-blog">Step 5: Initializing a new blog</h2>
+
+<p>By this step, you’ll have all the necessary gems to initialize a new blog. In my last post, I posted the codes to start a new blog. I will post them here again, simply type in the following commands:</p>
+
+<p>Open up a browser window, navigate to http://localhost:4000 to see your site. In the Command Prompt, press CTRL + C to stop the server.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>jekyll new my-awesome-site
+~ <span class="nv">$ </span><span class="nb">cd </span>my-awesome-site
+~ <span class="nv">$ </span>jekyll serve</code></pre></div>
+
+<h2 id="step-6-knowing-the-configyml-file">Step 6: Knowing the _config.yml file</h2>
+
+<p>The _config.yml file in the my-awesome-site folder contains all the essential information about your new blog. When you run any Jekyll commands, the first file it reads is the _config.yml file, then proceeds to compile the site according to the instructions provided in the _config.yml file. A very basic _config.yml file would contain the following:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">name</span><span class="p">:</span> <span class="no">Your</span> <span class="no">New</span> <span class="no">Jekyll</span> <span class="no">Site</span>
+<span class="ss">markdown</span><span class="p">:</span> <span class="n">redcarpet</span>
+<span class="ss">pygments</span><span class="p">:</span> <span class="kp">true</span></code></pre></div>
+
+<p>You can add many more statements to make you Jekyll site more versatile and user friendly. I will discuss them in another post.</p>
+
+<h2 id="step-7-knowing-the-jekyll-folder-structure">Step 7: Knowing the Jekyll folder structure</h2>
+
+<p>Jekyll utilizes a certain folder structure to store and compile the site. When you first initialize a new site, your new site structure will look something like the following:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">my-awesome-site/
+<span class="p">|</span>   .gitignore
+<span class="p">|</span>   index.html
+<span class="p">|</span>   _config.yml
+<span class="p">|</span>
++---css
+<span class="p">|</span>       main.css
+<span class="p">|</span>       syntax.css
+<span class="p">|</span>
++---_layouts
+<span class="p">|</span>       default.html
+<span class="p">|</span>       post.html
+<span class="p">|</span>
++---_posts
+        2013-12-21-welcome-to-jekyll.markdown</code></pre></div>
+
+<p>The folder names that proceed with an underscore(_) tells Jekyll not to directly include those folders in the final compilation. Like the css folder that does not start with an underscore will be directly copied in the final compilation. This method helps to distinguish between the development environment and the production environment.</p>
+
+<h2 id="step-8-adding-new-postsmodifying-posts">Step 8: Adding new posts/Modifying posts</h2>
+
+<p>This is most probably the most essential part that gives Jekyll its name. Jekyll is a blog aware static site generator, and without the blog part it would be useless. To add a new post, simply navigate to the _posts/ directory and create a new file with this structure YYYY-MM-DD-Title-Of-Your-New-Post.markdown. You can have the file in different extensions as per your choice, like *.md, *.textile etc. If you fail to name the file in this structure, Jekyll will ignore that post in the final compilation. Open up your newly created file, and fill out the Front matter YAML. This enables Jekyll to properly recognize the post and get essential information regarding the post, like its categories and tags. A simple post file should have the following Front matter YAML embedded on top:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">---</span>
+<span class="ss">layout</span><span class="p">:</span> <span class="n">post</span>
+<span class="ss">title</span><span class="p">:</span>  <span class="s2">&quot;Title of the Post&quot;</span>
+<span class="ss">date</span><span class="p">:</span>   <span class="mi">2013</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">21</span> <span class="mi">15</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">09</span> <span class="c1">#YYYY-MM-DD HH:MM:SS</span>
+<span class="ss">categories</span><span class="p">:</span> <span class="n">articles</span>
+<span class="o">---</span>
+<span class="no">Content</span> <span class="n">goes</span> <span class="n">here</span></code></pre></div>
+
+<p>The lines in between the triple dashes (—) provide the essential information about that post to the markdown/textile parser during Jekyll compilation.</p>
+
+<h2 id="step-9-compiling-the-site-for-deployment">Step 9: Compiling the site for deployment</h2>
+
+<p>After you’ve added one or few posts and you’re feeling ready to offload the site to a deployment environment, run the ~ $ jekyll serve command to see you site live at http://localhost:4000. Additionally you can run ~ $ jekyll serve -w to view the site live while you add/edit something and see the changes reflected instantly on the local server. When you’re quite happy with the results, press CTRL + C to stop the local server and run the following command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">~ <span class="nv">$ </span>jekyll build</code></pre></div>
+
+<p>This will generate the site in the _site/ directory inside your Jekyll site folder, which is ready for deployment.</p>
+
+<h2 id="step-10-deployment">Step 10: Deployment</h2>
+
+<p>Deployment is painless with Jekyll. At this step, you can simply copy over the contents of the _site/ folder to your web-hosting over FTP. There are other novel approaches of deployment using Git and SSH, but that’s a matter of discussion for another day. Jekyll is a highly flexible platform, and it lets you do things in your way, a feature no other platforms can even offer.</p>
+
+<p>If you’ve enjoyed this post, feel free to like it or share it on facebook, or give me a shoutout in twitter @hmfaysal</p>
+
+</div>
+</article>
+<div class=cf></div>
+<div class="row text-center">
+<section class="summer-post-share">
+<a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Installing Jekyll on Windows&quot;%20/tutorial/installing-jekyll-on-windows%20via%20&#64;david_dao_" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false" title="Share on Twitter">
+<i class="fa fa-twitter"></i>
+</a>
+<a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/tutorial/installing-jekyll-on-windows" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false" title="Share on Facebook">
+<i class="fa fa-facebook"></i>
+</a>
+<a class="google-icon" href="https://plus.google.com/share?url=/tutorial/installing-jekyll-on-windows" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false" title="Share on Google+">
+<i class="fa fa-google-plus"></i>
+</a>
+</section>
+</div>
+<div class=cf></div>
+<div class="summer-author-info">
+<div class="row">
+<section class="summer-post-author small-12 columns">
+<img src="/images/daviddao.jpg" class="summer-post-author-avatar" alt="David Dao's photo" itemprop="image">
+<span class="author-label">Author</span>
+<h1>David Dao</h1>
+<p><a href="mailto:david.dao@tum.de" class="author-website">david.dao@tum.de</a></p>
+<p>Awesome Dude, Awesome Life</p>
+</section>
+</div>
+</div>
+<div class=cf></div>
+
+<section class="summer-disqus row">
+<div class="small-12 columns">
+<h1 class=summer-comments-header>Comments</h1>
+<div id="disqus_thread"></div>
+<script type="text/javascript">var disqus_shortname="hmfaysal";(function(){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src="//"+disqus_shortname+".disqus.com/embed.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)})();(function(){var a=document.createElement("script");a.async=true;a.type="text/javascript";a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("HEAD")[0]||document.getElementsByTagName("BODY")[0]).appendChild(a)}());</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+
+<div class=cf></div>
+<footer class="summer-site-footer">
+<div class="copyright">
+<section>All content copyright <a href="/about">David Dao</a> &copy; 2014 &bull; All rights reserved.</section>
+<section>Proudly published with <a class="icon-ghost" href="https://jekyllrb.com/">Jekyll</a></section>
+</div>
+<div class="social-icons">
+
+<a href="http://twitter.com/david_dao_">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+</a>
+
+
+
+
+<a href="http://github.com/daviddao">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-github fa-stack-1x"></i>
+</span>
+</a>
+
+
+<a href="http://facebook.com/profile.daviddao">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-facebook fa-stack-1x"></i>
+</span>
+</a>
+
+</div>
+<div class="cf"></div>
+</footer>
+</main>
+<script>var twitterAccount="hmfaysal";</script>
+<div class="shareTooltip" id="shareTooltip">
+<div class="tooltipContainer"><a id="sendToTwitter" href="" class="sharingLink twitter"><span></span></a></div>
+</div>
+<script>!function(f,a,g){var e,b=f.getElementsByTagName(a)[0],c=/^http:/.test(f.location)?"http":"https";if(!f.getElementById(g)){e=f.createElement(a);e.id=g;e.src=c+"://platform.twitter.com/widgets.js";b.parentNode.insertBefore(e,b)}}(document,"script","twitter-wjs");</script>
+<script src="/assets/js/vendor/modernizr.js"></script>
+<script src="/assets/js/foundation.min.js"></script>
+
+<script src="/assets/js/summer.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+<script src="/assets/js/vendor/selectshare.js"></script>
+<script type='text/javascript'>$(document).foundation();</script>
+<script type='text/javascript'>$(document).ready(function(){$(".time").text(function(a,b){return Math.round(parseFloat(b))})});</script>
+
+</body>
+</html>
