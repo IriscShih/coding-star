@@ -26,7 +26,7 @@ Just go to [oh-my-zsh](http://ohmyz.sh/). You will never miss bash again.
 
 {% highlight bash %}
 curl -L http://install.ohmyz.sh | sh
-{% endhighligh %}
+{% endhighlight %}
 
 ## MacVIM
 MacOS preinstalled Vim is old... really old. Time for an update! 
@@ -45,13 +45,13 @@ Restart your terminal app and voila, Vim 7.4 on your Mac!
 
 {% highlight bash %}
 alias vim="/Users/user/Applications/MacVim.app/Contents/MacOS/Vim"
-{% endhighligh %}
+{% endhighlight %}
 
 or override it completely (need Xcode and Homebrew for that!)
 
 {% highlight bash %}
 brew install macvim --override-system-vim
-{% endhighligh %}
+{% endhighlight %}
 
 ## iTerm 2 - the better terminal.app
 Please, get rid of your terminal. There is something better out there.
@@ -61,7 +61,7 @@ iTerm 2 is just wonderful! It is transparent, has cool shortkeys which allows yo
 vim ~/.vimrc
 
 set mouse=a
-{% endhighligh %}
+{% endhighlight %}
 
 You can install it [here](http://iterm2.com/)
 

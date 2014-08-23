@@ -1,0 +1,46 @@
+<p>Ever used Vim in Mac but somehow wish, you could select text with your mouse cursor?
+Sadly your normal terminal cannot recognize mouse events in MacOS. Furthermore, 
+using bash might be not the best way to your way into Code Heaven. In the following I will list some cool tools, which are useful for everyday coding with VIM.</p>
+
+<h2 id="oh-my-zsh">Oh-my-zsh</h2>
+<p>Forget bash, zsh comes with auto-fill, git support and hundreds of plugins for nodejs, python, etc. And it is easy to install.
+Just go to <a href="http://ohmyz.sh/">oh-my-zsh</a>. You will never miss bash again.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">curl -L http://install.ohmyz.sh <span class="p">|</span> sh</code></pre></div>
+
+<h2 id="macvim">MacVIM</h2>
+<p>MacOS preinstalled Vim is old… really old. Time for an update! </p>
+
+<p><a href="https://code.google.com/p/macvim/">MacVim</a> supports multiple windows with tabbed editing and a host of other features such as:</p>
+
+<ul>
+  <li>bindings to standard OS X keyboard shortcuts (⌘Z, ⌘V, ⌘A, ⌘G, etc.),</li>
+  <li>transparent backgrounds,</li>
+  <li>full-screen mode,</li>
+  <li>multibyte editing with OS X input methods and automatic font substitution,</li>
+  <li>ODB editor support,
+and more. Most importantly, MacVim brings you the <strong>full power of Vim 7.4</strong> to Mac OS X.</li>
+</ul>
+
+<p>Install it from the site and just set an alias to vim in your .bash_profile.
+Restart your terminal app and voila, Vim 7.4 on your Mac!</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">vim</span><span class="o">=</span><span class="s2">&quot;/Users/user/Applications/MacVim.app/Contents/MacOS/Vim&quot;</span></code></pre></div>
+
+<p>or override it completely (need Xcode and Homebrew for that!)</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install macvim --override-system-vim</code></pre></div>
+
+<h2 id="iterm-2---the-better-terminalapp">iTerm 2 - the better terminal.app</h2>
+<p>Please, get rid of your terminal. There is something better out there.
+iTerm 2 is just wonderful! It is transparent, has cool shortkeys which allows you to work with the terminal lightning fast, it has textsearch and it allows you to edit your .vimrc file in that way, that VIM can recognize the mouse cursor! Awesome!</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">vim ~/.vimrc
+
+<span class="nb">set </span><span class="nv">mouse</span><span class="o">=</span>a</code></pre></div>
+
+<p>You can install it <a href="http://iterm2.com/">here</a></p>
+
+<p>That are some nice tools I discovered for setting up lightning speed dev with your console.
+Have fun!</p>
+
