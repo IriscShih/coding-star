@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>A BETTER CONSOLE | CODING STAR</title>
+<meta name="description" content="using MacVim, zsh and iTerm">
+<meta name="keywords" content="MacVIM, ZSH, iTERM">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:title" content="a better console">
+<meta name="twitter:description" content="using MacVim, zsh and iTerm">
+<meta name="twitter:creator" content="@david_dao_">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="a better console">
+<meta property="og:description" content="using MacVim, zsh and iTerm">
+<meta property="og:url" content="/javascript/a-better-console">
+<meta property="og:site_name" content="Coding Star">
+<meta property="og:image" content="/images/">
+
+
+
+<link rel="canonical" href="/javascript/a-better-console">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Coding Star Feed">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/css/vendor/normalize-production.css">
+<link rel="stylesheet" href="/assets/css/vendor/foundation.min.css">
+
+<link rel="stylesheet" href="/assets/css/style-production.css">
+<link rel="stylesheet" href="/assets/css/post-production.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>/*<![CDATA[*/window.jQuery||document.write('<script src="/assets/js/vendor/jquery-1.11.1.min.js"><\/script>');/*]]>*/</script>
+
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>MathJax.Hub.Config({config:["MMLorHTML.js"],extensions:["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],jax:["input/TeX"],tex2jax:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:false},TeX:{TagSide:"right",TagIndent:".8em",MultLineWidth:"85%",equationNumbers:{autoNumber:"AMS",},unicode:{fonts:"STIXGeneral,'Arial Unicode MS'"}},showProcessingMessages:false});</script>
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+<body class=post-template itemscope itemtype=http://schema.org/WebPage>
+
+<main id=summer-post-container-simple class=summer-post-container-simple role=main itemscope itemtype=http://schema.org/Article>
+<header class=summer-post-header-simple>
+<div class=summer-post-menu-header-simple>
+
+
+<a class=summer-blog-logo href=""><img src="/images/logo.png" alt="Blog Logo" /></a>
+
+<div class=summer-blog-menu>
+<div class="summer-mobile-menu show-for-small">
+<a href=#><i class="fa fa-bars"></i></a>
+</div>
+<ul class=summer-menu>
+<li class="summer-mobile-close-btn show-for-small text-right">
+<a href=#><i class="fa fa-times"></i></a>
+</li>
+
+<li>
+<a href="/">Home</a>
+ </li>
+
+<li>
+<a href="/featured">Featured Posts</a>
+ </li>
+
+<li>
+<a href="/categories">Categories</a>
+ </li>
+
+<li>
+<a href="/about">About</a>
+ </li>
+
+</ul>
+</div>
+</div>
+
+<div class="summer-post-title-simple row">
+<div class="small-12 columns">
+<div class=summer-post-meta-simple>
+<h1 itemprop=name><i class="fa fa-star-half-o fa-spin"></i>&nbsp;a better console</h1>
+<p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name>David Dao </strong></span> &#8212; on <span itemprop=articleSection><a href="/tags/index.html#MacVIM" title="Posts tagged with MacVIM" rel=tag>MacVIM</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#ZSH" title="Posts tagged with ZSH" rel=tag>ZSH</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#iTERM" title="Posts tagged with iTERM" rel=tag>iTERM</a></span> <strong><time datetime="2014-08-24T00:00:00+02:00" itemprop=datePublished>24 Aug 2014</time></strong></p>
+<strong><i>&quot;using MacVim, zsh and iTerm&quot;</i></strong>
+</div>
+</div>
+</div>
+</header>
+
+<article class="summer-post-content post tag-simple" itemscope itemtype=http://schema.org/BlogPosting>
+<div itemprop=articleBody><p>Ever used Vim in Mac but somehow wish, you could select text with your mouse cursor?
+Sadly your normal terminal cannot recognize mouse events in MacOS. Furthermore, 
+using bash might be not the best way to your way into Code Heaven. In the following I will list some cool tools, which are useful for everyday coding with VIM.</p>
+
+<h2 id="oh-my-zsh">Oh-my-zsh</h2>
+<p>Forget bash, zsh comes with auto-fill, git support and hundreds of plugins for nodejs, python, etc. And it is easy to install.
+Just go to <a href="http://ohmyz.sh/">oh-my-zsh</a>. You will never miss bash again.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">curl -L http://install.ohmyz.sh <span class="p">|</span> sh</code></pre></div>
+
+<h2 id="macvim">MacVIM</h2>
+<p>MacOS preinstalled Vim is old… really old. Time for an update! </p>
+
+<p><a href="https://code.google.com/p/macvim/">MacVim</a> supports multiple windows with tabbed editing and a host of other features such as:</p>
+
+<ul>
+  <li>bindings to standard OS X keyboard shortcuts (⌘Z, ⌘V, ⌘A, ⌘G, etc.),</li>
+  <li>transparent backgrounds,</li>
+  <li>full-screen mode,</li>
+  <li>multibyte editing with OS X input methods and automatic font substitution,</li>
+  <li>ODB editor support,
+and more. Most importantly, MacVim brings you the <strong>full power of Vim 7.4</strong> to Mac OS X.</li>
+</ul>
+
+<p>Install it from the site and just set an alias to vim in your .bash_profile.
+Restart your terminal app and voila, Vim 7.4 on your Mac!</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">vim</span><span class="o">=</span><span class="s2">&quot;/Users/user/Applications/MacVim.app/Contents/MacOS/Vim&quot;</span></code></pre></div>
+
+<p>or override it completely (need Xcode and Homebrew for that!)</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install macvim --override-system-vim</code></pre></div>
+
+<h2 id="iterm-2---the-better-terminalapp">iTerm 2 - the better terminal.app</h2>
+<p>Please, get rid of your terminal. There is something better out there.
+iTerm 2 is just wonderful! It is transparent, has cool shortkeys which allows you to work with the terminal lightning fast, it has textsearch and it allows you to edit your .vimrc file in that way, that VIM can recognize the mouse cursor! Awesome!</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">vim ~/.vimrc
+
+<span class="nb">set </span><span class="nv">mouse</span><span class="o">=</span>a</code></pre></div>
+
+<p>You can install it <a href="http://iterm2.com/">here</a></p>
+
+<p>That are some nice tools I discovered for setting up lightning speed dev with your console.
+Have fun!</p>
+
+
+</div>
+</article>
+<div class=cf></div>
+<div class="row text-center">
+<section class="summer-post-share">
+<a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;a better console&quot;%20/javascript/a-better-console%20via%20&#64;david_dao_" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false" title="Share on Twitter">
+<i class="fa fa-twitter"></i>
+</a>
+<a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/javascript/a-better-console" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false" title="Share on Facebook">
+<i class="fa fa-facebook"></i>
+</a>
+<a class="google-icon" href="https://plus.google.com/share?url=/javascript/a-better-console" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false" title="Share on Google+">
+<i class="fa fa-google-plus"></i>
+</a>
+</section>
+</div>
+<div class=cf></div>
+<div class="summer-author-info">
+<div class="row">
+<section class="summer-post-author small-12 columns">
+<img src="/images/daviddao.jpg" class="summer-post-author-avatar" alt="David Dao's photo" itemprop="image">
+<span class="author-label">Author</span>
+<h1>David Dao</h1>
+<p><a href="mailto:david.dao@tum.de" class="author-website">david.dao@tum.de</a></p>
+<p>Researcher in machine learning and data science, co-founder of Forschungspreisende and passport stamp collector. I am fascinated with topics like big data, fast algorithms and artificial intelligence.</p>
+</section>
+</div>
+</div>
+
+<div class=cf></div>
+
+<div class=cf></div>
+
+<footer class="summer-site-footer">
+<div class="copyright">
+<section>All content copyright <a href="/about">David Dao</a> &copy; 2014 &bull; All rights reserved.</section>
+<section>Proudly published with <a class="icon-ghost" href="https://jekyllrb.com/">Jekyll</a></section>
+</div>
+<div class="social-icons">
+
+<a href="http://twitter.com/david_dao_">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+</a>
+
+
+
+
+<a href="http://github.com/daviddao">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-github fa-stack-1x"></i>
+</span>
+</a>
+
+
+<a href="http://facebook.com/profile.daviddao">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-facebook fa-stack-1x"></i>
+</span>
+</a>
+
+</div>
+<div class="cf"></div>
+</footer>    
+</main>
+<script>var twitterAccount="hmfaysal";</script>
+<div class="shareTooltip" id="shareTooltip">
+<div class="tooltipContainer"><a id="sendToTwitter" href="" class="sharingLink twitter"><span></span></a></div>
+</div>
+<script>!function(f,a,g){var e,b=f.getElementsByTagName(a)[0],c=/^http:/.test(f.location)?"http":"https";if(!f.getElementById(g)){e=f.createElement(a);e.id=g;e.src=c+"://platform.twitter.com/widgets.js";b.parentNode.insertBefore(e,b)}}(document,"script","twitter-wjs");</script>
+<script src="/assets/js/vendor/modernizr.js"></script>
+<script src="/assets/js/foundation.min.js"></script>
+
+<script src="/assets/js/summer.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+<script src="/assets/js/vendor/selectshare.js"></script>
+<script type='text/javascript'>$(document).foundation();</script>
+<script type='text/javascript'>$(document).ready(function(){$(".time").text(function(a,b){return Math.round(parseFloat(b))})});</script>
+
+</body>
+</html>
