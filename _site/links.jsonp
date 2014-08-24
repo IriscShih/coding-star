@@ -2,25 +2,22 @@ callback([
 
   {
     "text": "Hello World",
-    "href": "/personal/first-commit"
+    "href": "http://iriscshih.github.io/coding-star/personal/first-commit"
   } ,
 
   {
     "text": "Data Science with Functional JavaScript",
-    "href": "/javascript/functional-javascript-and-data-science"
+    "href": "http://iriscshih.github.io/coding-star/javascript/functional-javascript-and-data-science"
   } ,
 
   {
     "text": "a better console",
-    "href": "/javascript/a-better-console"
-<<<<<<< HEAD
+    "href": "http://iriscshih.github.io/coding-star/javascript/a-better-console"
   } ,
 
   {
-    "text": "Let's Learn C++",
-    "href": "/personal/let's-learn-C++"
-=======
->>>>>>> 7c11fbfd1f0c57e9e27c3b34a30fbccc0946b4ee
+    "text": "Let's Learn C++ (Part I)",
+    "href": "http://iriscshih.github.io/coding-star/c++/let's-learn-C++-part1"
   } 
 
 ])
