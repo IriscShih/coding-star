@@ -31,11 +31,11 @@ owner2:
   avatar:         irisshih.jpg
   email:          iris.cshih@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    Awesome Girl, Awesome Life
+  description:    Master of Informatics student in Technical University Munich, major in computer vision and biomedical computing. I am facinated in data visualization, imaging processing and machine learning. 
   # Social networking links used in footer. Update and remove as you like.
   twitter:        iriscshih
-  facebook:       
-  github:         iriscshih  
+  facebook:       iriscShih
+  github:         IriscShih  
   # For Google Authorship https://plus.google.com/authorship
   google_plus:  
 

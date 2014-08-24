@@ -2,12 +2,12 @@ callback([
 
   {
     "text": "Hello World",
-    "href": "/personal/first-commit"
+    "href": "http://iriscshih.github.io/coding-star/personal/first-commit"
   } ,
 
   {
     "text": "Data Science with Functional JavaScript",
-    "href": "/javascript/functional-javascript-and-data-science"
+    "href": "http://iriscshih.github.io/coding-star/javascript/functional-javascript-and-data-science"
   } 
 
 ])
