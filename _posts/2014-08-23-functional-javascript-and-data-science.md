@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Science with Functional JavaScript
+title: Getting Data with Functional JavaScript
 description: "Part 1 - Data Wrangling"
 headline: "Data Wrangling using Chromes Dev Tools"
 categories: JavaScript
