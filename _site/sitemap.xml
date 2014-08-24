@@ -1,58 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://iriscshih.github.io/coding-star</loc>
+        <loc></loc>
     </url>
     
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/404.html</loc>
+        <loc>/404.html</loc>
     </url>
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/about/index.html</loc>
+        <loc>/about/index.html</loc>
     </url>
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/categories/index.html</loc>
+        <loc>/categories/index.html</loc>
     </url>
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/featured/</loc>
+        <loc>/featured/</loc>
     </url>
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/index.html</loc>
+        <loc>/index.html</loc>
     </url>
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/links.jsonp</loc>
+        <loc>/links.jsonp</loc>
     </url>
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/sitemap.xml</loc>
+        <loc>/sitemap.xml</loc>
     </url>
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/status-updates-archive/index.html</loc>
+        <loc>/status-updates-archive/index.html</loc>
     </url>
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/tags/index.html</loc>
+        <loc>/tags/index.html</loc>
     </url>
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/update-log/index.html</loc>
+        <loc>/update-log/index.html</loc>
     </url>
     
 
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/javascript/functional-javascript-and-data-science</loc>
+        <loc>/personal/let's-learn-C++</loc>
     </url>
     
     <url>
-        <loc>http://iriscshih.github.io/coding-star/personal/first-commit</loc>
+        <loc>/javascript/a-better-console</loc>
+    </url>
+    
+    <url>
+        <loc>/javascript/functional-javascript-and-data-science</loc>
+    </url>
+    
+    <url>
+        <loc>/personal/first-commit</loc>
     </url>
     
 </urlset>
