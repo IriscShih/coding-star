@@ -13,11 +13,14 @@ callback([
   {
     "text": "a better console",
     "href": "/javascript/a-better-console"
+<<<<<<< HEAD
   } ,
 
   {
     "text": "Let's Learn C++",
     "href": "/personal/let's-learn-C++"
+=======
+>>>>>>> 7c11fbfd1f0c57e9e27c3b34a30fbccc0946b4ee
   } 
 
 ])

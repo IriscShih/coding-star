@@ -48,6 +48,7 @@
 
     
     <url>
+<<<<<<< HEAD
         <loc>/personal/let's-learn-C++</loc>
     </url>
     
@@ -56,6 +57,12 @@
     </url>
     
     <url>
+=======
+        <loc>/javascript/a-better-console</loc>
+    </url>
+    
+    <url>
+>>>>>>> 7c11fbfd1f0c57e9e27c3b34a30fbccc0946b4ee
         <loc>/javascript/functional-javascript-and-data-science</loc>
     </url>
     
