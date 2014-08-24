@@ -1,6 +1,6 @@
 ---
 layout: post
-title: High-Performance JavaScript
+title: Notes on High-Performance JavaScript
 description: "Benchmarking, NodeJS and V8"
 headline: 
 categories: JavaScript

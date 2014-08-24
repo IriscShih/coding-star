@@ -1,6 +1,6 @@
 ---
 layout: post
-title: a better console
+title: A Better Console
 description: "using MacVim, zsh and iTerm"
 headline: "useful tools for working with the terminal in MacOS"
 categories: JavaScript
