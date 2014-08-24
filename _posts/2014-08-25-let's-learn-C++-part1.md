@@ -169,7 +169,9 @@ int main () {
 }
 {% endhighlight %}
 
-####Step 2 : We need to receive an integer input from the player (with appropriate error-checking on cin), and check it against the secret number. Try and write this part of the game yourself before checking the solution below! :)
+####Step 2 : We need to receive an integer input from the player (with appropriate error-checking on cin), and check it against the secret number. 
+
+Try and write this part of the game yourself before checking the solution below! :)
 
 
 {% highlight c++ %}
@@ -203,7 +205,9 @@ int main () {
 {% endhighlight %}
 
 
-####Step 3 : Add a loop that keeps collecting guesses from the player until they finally guess the secret number. After completing this part of the program, you can check out the solution below. ;)
+####Step 3 : Add a loop that keeps collecting guesses from the player until they finally guess the secret number. 
+
+After completing this part of the program, you can check out the solution below. ;)
 
 {% highlight c++ %}
 // guess.cpp.  Iris Shih
