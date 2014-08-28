@@ -37,6 +37,7 @@ Before start with the examples, there are few things to notice regarding readibi
 
 Okay, let's try the following classic program to see whether your compiler works or not!
 
+-------------------------------------------
 {% highlight c++ %}
 // hello.cpp: Iris Shih
 // Description: a program that prints the immortal saying "hello world"
@@ -48,9 +49,8 @@ int main() {
  cout << "Hello World!" << endl;
  return 0;
 }
-
 {% endhighlight %}
-
+-------------------------------------------
 
 The most important thing is to make sure you can compile and run this program. Then, we can try some more interesting experiments:
 
@@ -65,8 +65,8 @@ The most important thing is to make sure you can compile and run this program. T
 
 It's easy to get input from the keyboard in C++ using cin. Here is an example:
 
+-------------------------------------------
 {% highlight c++ %}
-
 // get_input.cpp: Iris Shih
 // Description: Illustrate the use of cin to get input.
 
@@ -98,6 +98,7 @@ int main() {
 }
 
 {% endhighlight %}
+-------------------------------------------
 
 An experiment:
 
@@ -109,6 +110,7 @@ An experiment:
 
 ### Example 3 : What is the Output?
 
+-------------------------------------------
 {% highlight c++%}
 #include <iostream>
 using namespace std;
@@ -125,6 +127,7 @@ int main (void) {
  return 0;
 } 
 {% endhighlight %}
+-------------------------------------------
 
 ### Example 4 : Decomposing makes everything easier... ;)
 
@@ -147,7 +150,7 @@ This process of development is called **decomposition**, which means breaking a 
 ####Step 1 : Do a Google search to see how generate a random number using C++. Try searching on "rand C++".
 You can check out the solution below.
 
-
+-------------------------------------------
 {% highlight c++ %}
 // random.cpp.  Iris Shih
 // Description: Illustrates how to generate a random number in C++
@@ -168,12 +171,13 @@ int main () {
   cout << "Your random number:" << random_number << endl;
 }
 {% endhighlight %}
+-------------------------------------------
 
 ####Step 2 : We need to receive an integer input from the player (with appropriate error-checking on cin), and check it against the secret number. 
 
 Try and write this part of the game yourself before checking the solution below! :)
 
-
+-------------------------------------------
 {% highlight c++ %}
 // guess.cpp.  Iris Shih
 // Description: A guessing game where the player guesses the secret number.
@@ -203,12 +207,14 @@ int main () {
   return 0;
 }
 {% endhighlight %}
+-------------------------------------------
 
 
 ####Step 3 : Add a loop that keeps collecting guesses from the player until they finally guess the secret number. 
 
 After completing this part of the program, you can check out the solution below. ;)
 
+-------------------------------------------
 {% highlight c++ %}
 // guess.cpp.  Iris Shih
 // Description: A guessing game where the player guesses the secret number.
@@ -240,6 +246,7 @@ int main () {
   return 0;
 }
 {% endhighlight %}
+-------------------------------------------
 
 **Decomposition** is one of the most important skills for a programmer to learn. Being able to break a task down into manageable pieces, and then complete one at a time is critical, no matter how big or how small the project. Here are some other opportunities for you to practice decomposition.
 
