@@ -247,4 +247,4 @@ int main () {
     - For example, gcd(12, 18) = 6, gcd(−4, 14) = 2. 
     - The most efficient way to compute gcd is with the **Euclidean algorithm**. 
     - Write a program with a function to compute gcd for two integers. Try doing the function without recursion first - it will help you understand how the algorithm works.
-    - [Click here]() to see the solution
+    - [Click here]() to see the solution                                                                                                            

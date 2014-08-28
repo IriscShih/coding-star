@@ -2,26 +2,26 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>A BETTER CONSOLE | CODING STAR</title>
-<meta name="description" content="using MacVim, zsh and iTerm">
-<meta name="keywords" content="MacVIM, ZSH, iTERM">
+<title>NOTES ON HIGH-PERFORMANCE JAVASCRIPT | CODING STAR</title>
+<meta name="description" content="Benchmarking, NodeJS and V8">
+<meta name="keywords" content="JavaScript, V8, Node">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/logo.png">
-<meta name="twitter:title" content="A Better Console">
-<meta name="twitter:description" content="using MacVim, zsh and iTerm">
+<meta name="twitter:title" content="Notes on High-Performance JavaScript">
+<meta name="twitter:description" content="Benchmarking, NodeJS and V8">
 <meta name="twitter:creator" content="@david_dao_">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="A Better Console">
-<meta property="og:description" content="using MacVim, zsh and iTerm">
-<meta property="og:url" content="/javascript/a-better-console">
+<meta property="og:title" content="Notes on High-Performance JavaScript">
+<meta property="og:description" content="Benchmarking, NodeJS and V8">
+<meta property="og:url" content="/javascript/high-performance-javascript">
 <meta property="og:site_name" content="Coding Star">
 <meta property="og:image" content="/images/">
 
 
 
-<link rel="canonical" href="/javascript/a-better-console">
+<link rel="canonical" href="/javascript/high-performance-javascript">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Coding Star Feed">
 
 <meta name="HandheldFriendly" content="True">
@@ -91,60 +91,43 @@
 <div class="summer-post-title-simple row">
 <div class="small-12 columns">
 <div class=summer-post-meta-simple>
-<h1 itemprop=name><i class="fa fa-star-half-o fa-spin"></i>&nbsp;A Better Console</h1>
-<p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name>David Dao </strong></span> &#8212; on <span itemprop=articleSection><a href="/tags/index.html#MacVIM" title="Posts tagged with MacVIM" rel=tag>MacVIM</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#ZSH" title="Posts tagged with ZSH" rel=tag>ZSH</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#iTERM" title="Posts tagged with iTERM" rel=tag>iTERM</a></span> <strong><time datetime="2014-08-24T00:00:00+02:00" itemprop=datePublished>24 Aug 2014</time></strong></p>
-<strong><i>&quot;using MacVim, zsh and iTerm&quot;</i></strong>
+<h1 itemprop=name><i class="fa fa-star-half-o fa-spin"></i>&nbsp;Notes on High-Performance JavaScript</h1>
+<p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name>David Dao </strong></span> &#8212; on <span itemprop=articleSection><a href="/tags/index.html#JavaScript" title="Posts tagged with JavaScript" rel=tag>JavaScript</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#V8" title="Posts tagged with V8" rel=tag>V8</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#Node" title="Posts tagged with Node" rel=tag>Node</a></span> <strong><time datetime="2014-08-25T00:00:00+02:00" itemprop=datePublished>25 Aug 2014</time></strong></p>
+<strong><i>&quot;Benchmarking, NodeJS and V8&quot;</i></strong>
 </div>
 </div>
 </div>
 </header>
 
 <article class="summer-post-content post tag-simple" itemscope itemtype=http://schema.org/BlogPosting>
-<div itemprop=articleBody><p>Ever used Vim in Mac but somehow wish, you could select text with your mouse cursor?
-Sadly your normal terminal cannot recognize mouse events in MacOS. Furthermore, 
-using bash might be not the best way to your way into Code Heaven. In the following I will list some cool tools, which are useful for everyday coding with VIM.</p>
+<div itemprop=articleBody><p>High-Performance JavaScript? Can JavaScript compete or even be faster than C?
+This post is inspired by reading Felix Geisendörfer’s <a href="https://github.com/felixge/faster-than-c">Post</a>.
+First we will discuss about methods finding out, how to test the performance of your code in general:</p>
 
-<h2 id="oh-my-zsh">Oh-my-zsh</h2>
-<p>Forget bash, zsh comes with auto-fill, git support and hundreds of plugins for nodejs, python, etc. And it is easy to install.
-Just go to <a href="http://ohmyz.sh/">oh-my-zsh</a>. You will never miss bash again.</p>
+<h2 id="profiling-and-benchmarking">Profiling and Benchmarking</h2>
+<p>Profiling is useful, when you consider a functional approach in JavaScript.
+Node allows you to inspect the speed of your program by using </p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">curl -L http://install.ohmyz.sh <span class="p">|</span> sh</code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">node</span> <span class="o">--</span><span class="nx">prof</span></code></pre></div>
 
-<h2 id="macvim">MacVIM</h2>
-<p>MacOS preinstalled Vim is old… really old. Time for an update! </p>
+<p>which creates a V8.log.
+It will show you how long a specific function needs in your program. Perfect to fix bottlenecks.
+However this approach has some issues - As mentioned, it won’t help much, if you decide a more infunctional javascript approach and put everything in one function.</p>
 
-<p><a href="https://code.google.com/p/macvim/">MacVim</a> supports multiple windows with tabbed editing and a host of other features such as:</p>
+<h2 id="benchmark-driven-development">Benchmark Driven Development</h2>
+<p>Benchmarks are the oldest and still best way to test for speed.</p>
 
-<ul>
-  <li>bindings to standard OS X keyboard shortcuts (⌘Z, ⌘V, ⌘A, ⌘G, etc.),</li>
-  <li>transparent backgrounds,</li>
-  <li>full-screen mode,</li>
-  <li>multibyte editing with OS X input methods and automatic font substitution,</li>
-  <li>ODB editor support,
-and more. Most importantly, MacVim brings you the <strong>full power of Vim 7.4</strong> to Mac OS X.</li>
-</ul>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">start</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+	<span class="nx">function_to_test</span><span class="p">();</span>
+	<span class="kd">var</span> <span class="nx">duration</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">-</span> <span class="nx">start</span><span class="p">;</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">duration</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
 
-<p>Install it from the site and just set an alias to vim in your .bash_profile.
-Restart your terminal app and voila, Vim 7.4 on your Mac!</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">vim</span><span class="o">=</span><span class="s2">&quot;/Users/user/Applications/MacVim.app/Contents/MacOS/Vim&quot;</span></code></pre></div>
-
-<p>or override it completely (need Xcode and Homebrew for that!)</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install macvim --override-system-vim</code></pre></div>
-
-<h2 id="iterm-2---the-better-terminalapp">iTerm 2 - the better terminal.app</h2>
-<p>Please, get rid of your terminal. There is something better out there.
-iTerm 2 is just wonderful! It is transparent, has cool shortkeys which allows you to work with the terminal lightning fast, it has textsearch and it allows you to edit your .vimrc file in that way, that VIM can recognize the mouse cursor! Awesome!</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">vim ~/.vimrc
-
-<span class="nb">set </span><span class="nv">mouse</span><span class="o">=</span>a</code></pre></div>
-
-<p>You can install it <a href="http://iterm2.com/">here</a></p>
-
-<p>That are some nice tools I discovered for setting up lightning speed dev with your console.
-Have fun!</p>
+<h2 id="v8---the-magic-machine">V8 - the magic machine</h2>
+<p>Node is build on basis of V8. V8 is Chrome and Google’s Magic JavaScript Engine.
+Speaking, it converts JavaScript insanely fast into assembly (machine code)
+V8 is written in C++ and I will go into V8 into detail in the next post :)</p>
 
 
 </div>
@@ -152,13 +135,13 @@ Have fun!</p>
 <div class=cf></div>
 <div class="row text-center">
 <section class="summer-post-share">
-<a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;A Better Console&quot;%20/javascript/a-better-console%20via%20&#64;david_dao_" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false" title="Share on Twitter">
+<a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Notes on High-Performance JavaScript&quot;%20/javascript/high-performance-javascript%20via%20&#64;david_dao_" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false" title="Share on Twitter">
 <i class="fa fa-twitter"></i>
 </a>
-<a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/javascript/a-better-console" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false" title="Share on Facebook">
+<a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/javascript/high-performance-javascript" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false" title="Share on Facebook">
 <i class="fa fa-facebook"></i>
 </a>
-<a class="google-icon" href="https://plus.google.com/share?url=/javascript/a-better-console" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false" title="Share on Google+">
+<a class="google-icon" href="https://plus.google.com/share?url=/javascript/high-performance-javascript" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false" title="Share on Google+">
 <i class="fa fa-google-plus"></i>
 </a>
 </section>
