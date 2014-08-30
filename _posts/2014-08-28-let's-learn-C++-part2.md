@@ -288,3 +288,8 @@ int main() {
 - Now see if you can modify this program to allow the user to enter many records of data using a loop. We also want to read back all the data, one record at a time. 
 - [Click Here]() to see the solution!
 
+
+Now, already some practices that takes you into the C++ programming world! Maybe something you would like to know, such as working life in Google as a software engineer?
+
+> ###What it's like to be a software engineer at Google
+>Read about what it's like to work at Google on [this website](http://www.google.com/about/careers/lifeatgoogle/)
