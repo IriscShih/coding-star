@@ -45,11 +45,22 @@
         <loc>/update-log/index.html</loc>
     </url>
     
+    <url>
+        <loc>/page2/index.html</loc>
+    </url>
+    
 
     
     <url>
-<<<<<<< HEAD
-        <loc>/personal/let's-learn-C++</loc>
+        <loc>/c++/let's-learn-C++-part2</loc>
+    </url>
+    
+    <url>
+        <loc>/c++/let's-learn-C++-part1</loc>
+    </url>
+    
+    <url>
+        <loc>/javascript/high-performance-javascript</loc>
     </url>
     
     <url>
@@ -57,12 +68,6 @@
     </url>
     
     <url>
-=======
-        <loc>/javascript/a-better-console</loc>
-    </url>
-    
-    <url>
->>>>>>> 7c11fbfd1f0c57e9e27c3b34a30fbccc0946b4ee
         <loc>/javascript/functional-javascript-and-data-science</loc>
     </url>
     

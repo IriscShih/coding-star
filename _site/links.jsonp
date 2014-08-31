@@ -6,21 +6,28 @@ callback([
   } ,
 
   {
-    "text": "Data Science with Functional JavaScript",
+    "text": "Getting Data with Functional JavaScript",
     "href": "/javascript/functional-javascript-and-data-science"
   } ,
 
   {
-    "text": "a better console",
+    "text": "A Better Console",
     "href": "/javascript/a-better-console"
-<<<<<<< HEAD
   } ,
 
   {
-    "text": "Let's Learn C++",
-    "href": "/personal/let's-learn-C++"
-=======
->>>>>>> 7c11fbfd1f0c57e9e27c3b34a30fbccc0946b4ee
+    "text": "Notes on High-Performance JavaScript",
+    "href": "/javascript/high-performance-javascript"
+  } ,
+
+  {
+    "text": "Let's Learn C++ - Getting Start PartI",
+    "href": "/c++/let's-learn-C++-part1"
+  } ,
+
+  {
+    "text": "Let's Learn C++ - Getting Start PartII",
+    "href": "/c++/let's-learn-C++-part2"
   } 
 
 ])

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Let's Learn C++
-description: "Welcome to our blog :)"
+title: Let's Learn C++ - Getting Start PartI
+description: "Welcome to C++ learning session! :)"
 headline: "Let's Fire up the Engines"
-categories: personal
+categories: C++
 tags: 
   - blogging
   - c++
@@ -24,7 +24,7 @@ One of the best ways to learn how to program in a new language is by looking at 
 
 First of all, let's have a look at the tutorial of the instructions on compiling, [Setting up to compile c++](http://www.arachnoid.com/cpptutor/setup_unix.html), for getting start with programming in c++.
 
-Before start with the examples, there are few things to notic, however, regarding readibility. This refers to comments and formatting that hekp make programs easy to read, understand, and maintain.
+Before start with the examples, there are few things to notice regarding readibility. This refers to comments and formatting that help make programs easy to read, understand, and maintain.
 
 - Every program we write begins with a **header comment** : providing name of the author, their contact information, a short description, and usage(if relevant).
 - Add **explanatory comments**(using full sentences) : whenever the code does not document itself. (i.e. if the processing is tricky, non-obvious, interesting, or important.)
@@ -37,6 +37,7 @@ Before start with the examples, there are few things to notic, however, regardin
 
 Okay, let's try the following classic program to see whether your compiler works or not!
 
+-------------------------------------------
 {% highlight c++ %}
 // hello.cpp: Iris Shih
 // Description: a program that prints the immortal saying "hello world"
@@ -48,9 +49,8 @@ int main() {
  cout << "Hello World!" << endl;
  return 0;
 }
-
 {% endhighlight %}
-
+-------------------------------------------
 
 The most important thing is to make sure you can compile and run this program. Then, we can try some more interesting experiments:
 
@@ -65,8 +65,8 @@ The most important thing is to make sure you can compile and run this program. T
 
 It's easy to get input from the keyboard in C++ using cin. Here is an example:
 
+-------------------------------------------
 {% highlight c++ %}
-
 // get_input.cpp: Iris Shih
 // Description: Illustrate the use of cin to get input.
 
@@ -98,6 +98,7 @@ int main() {
 }
 
 {% endhighlight %}
+-------------------------------------------
 
 An experiment:
 
@@ -109,6 +110,7 @@ An experiment:
 
 ### Example 3 : What is the Output?
 
+-------------------------------------------
 {% highlight c++%}
 #include <iostream>
 using namespace std;
@@ -125,6 +127,7 @@ int main (void) {
  return 0;
 } 
 {% endhighlight %}
+-------------------------------------------
 
 ### Example 4 : Decomposing makes everything easier... ;)
 
@@ -144,9 +147,10 @@ We will work on this game in 3 steps:
 
 This process of development is called **decomposition**, which means breaking a task into sub-tasks, each of which is easy to do.
 
-####Step 1 : Do a Google search to see how generate a random number using C++. Try searching on "rand C++". 
+####Step 1 : Do a Google search to see how generate a random number using C++. Try searching on "rand C++".
+You can check out the solution below.
 
-Solution Here:
+-------------------------------------------
 {% highlight c++ %}
 // random.cpp.  Iris Shih
 // Description: Illustrates how to generate a random number in C++
@@ -167,3 +171,87 @@ int main () {
   cout << "Your random number:" << random_number << endl;
 }
 {% endhighlight %}
+-------------------------------------------
+
+####Step 2 : We need to receive an integer input from the player (with appropriate error-checking on cin), and check it against the secret number. 
+
+Try and write this part of the game yourself before checking the solution below! :)
+
+-------------------------------------------
+{% highlight c++ %}
+// guess.cpp.  Iris Shih
+// Description: A guessing game where the player guesses the secret number.
+
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+int main () {
+  int random_number, guess;
+
+  // Initialize random seed.
+  srand (time(NULL));
+
+  // Generate random number between 1 and 100
+  random_number = rand() % 100 + 1;
+
+  cout << "Guess our number (1 to 100) ";
+  if (!(cin >> guess)) {
+    cout << "Please enter only numbers" << endl;
+  } else {
+    if (random_number < guess) cout << "The secret number is lower than " << guess << endl;
+    else if (random_number > guess) cout << "The secret number is higher than" << guess << endl;
+    else cout << "You guessed it: " << random_number << endl;
+  }
+  cout << "random: " << random_number << endl;
+  return 0;
+}
+{% endhighlight %}
+-------------------------------------------
+
+
+####Step 3 : Add a loop that keeps collecting guesses from the player until they finally guess the secret number. 
+
+After completing this part of the program, you can check out the solution below. ;)
+
+-------------------------------------------
+{% highlight c++ %}
+// guess.cpp.  Iris Shih
+// Description: A guessing game where the player guesses the secret number.
+
+#include <iostream>
+#include <time.h>
+#include <cstdlib.h>
+using namespace std;
+
+int main () {
+  int random_number, guess;
+
+  // Initialize random seed.
+  srand (time(NULL));
+
+  // Generate random number between 1 and 100
+  random_number = rand() % 100 + 1;
+
+  cout << "Guess our number (1 to 100) ";
+  do {
+    if (!(cin >> guess)) {
+      cout << "Please enter only numbers" << endl;
+    } else {
+      if (random_number < guess) cout << "The secret number is lower than " << guess << endl;
+      else if (random_number > guess) cout << "The secret number is higher than " << guess << endl;
+    }
+  } while (random_number != guess);
+  cout << "Congratulations!" <<  endl;
+  return 0;
+}
+{% endhighlight %}
+-------------------------------------------
+
+**Decomposition** is one of the most important skills for a programmer to learn. Being able to break a task down into manageable pieces, and then complete one at a time is critical, no matter how big or how small the project. Here are some other opportunities for you to practice decomposition.
+
+- The **greatest common divisor** of two integers is the largest number that divides them both evenly. 
+    - For example, gcd(12, 18) = 6, gcd(−4, 14) = 2. 
+    - The most efficient way to compute gcd is with the **Euclidean algorithm**. 
+    - Write a program with a function to compute gcd for two integers. Try doing the function without recursion first - it will help you understand how the algorithm works.
+    - [Click here]() to see the solution                                                                                                            

@@ -2,26 +2,26 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>LET'S LEARN C++ | CODING STAR</title>
-<meta name="description" content="Welcome to our blog :)">
+<title>LET'S LEARN C++ - GETTING START PARTI | CODING STAR</title>
+<meta name="description" content="Welcome to C++ learning session! :)">
 <meta name="keywords" content="blogging, c++, start">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/logo.png">
-<meta name="twitter:title" content="Let's Learn C++">
-<meta name="twitter:description" content="Welcome to our blog :)">
+<meta name="twitter:title" content="Let's Learn C++ - Getting Start PartI">
+<meta name="twitter:description" content="Welcome to C++ learning session! :)">
 <meta name="twitter:creator" content="@david_dao_">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Let's Learn C++">
-<meta property="og:description" content="Welcome to our blog :)">
-<meta property="og:url" content="/personal/let's-learn-C++">
+<meta property="og:title" content="Let's Learn C++ - Getting Start PartI">
+<meta property="og:description" content="Welcome to C++ learning session! :)">
+<meta property="og:url" content="/c++/let's-learn-C++-part1">
 <meta property="og:site_name" content="Coding Star">
 <meta property="og:image" content="/images/">
 
 
 
-<link rel="canonical" href="/personal/let's-learn-C++">
+<link rel="canonical" href="/c++/let's-learn-C++-part1">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Coding Star Feed">
 
 <meta name="HandheldFriendly" content="True">
@@ -89,9 +89,9 @@
 <div class="summer-post-title-simple row">
 <div class="small-12 columns">
 <div class=summer-post-meta-simple>
-<h1 itemprop=name><i class="fa fa-star-half-o fa-spin"></i>&nbsp;Let's Learn C++</h1>
+<h1 itemprop=name><i class="fa fa-star-half-o fa-spin"></i>&nbsp;Let's Learn C++ - Getting Start PartI</h1>
 <p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name> Iris Shih</strong></span> &#8212; on <span itemprop=articleSection><a href="/tags/index.html#blogging" title="Posts tagged with blogging" rel=tag>blogging</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#c++" title="Posts tagged with c++" rel=tag>c++</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#start" title="Posts tagged with start" rel=tag>start</a></span> <strong><time datetime="2014-08-25T00:00:00+02:00" itemprop=datePublished>25 Aug 2014</time></strong></p>
-<strong><i>&quot;Welcome to our blog :)&quot;</i></strong>
+<strong><i>&quot;Welcome to C++ learning session! :)&quot;</i></strong>
 </div>
 </div>
 </div>
@@ -106,7 +106,7 @@
 
 <p>First of all, let’s have a look at the tutorial of the instructions on compiling, <a href="http://www.arachnoid.com/cpptutor/setup_unix.html">Setting up to compile c++</a>, for getting start with programming in c++.</p>
 
-<p>Before start with the examples, there are few things to notic, however, regarding readibility. This refers to comments and formatting that hekp make programs easy to read, understand, and maintain.</p>
+<p>Before start with the examples, there are few things to notice regarding readibility. This refers to comments and formatting that help make programs easy to read, understand, and maintain.</p>
 
 <ul>
   <li>Every program we write begins with a <strong>header comment</strong> : providing name of the author, their contact information, a short description, and usage(if relevant).</li>
@@ -235,8 +235,7 @@
 <p>This process of development is called <strong>decomposition</strong>, which means breaking a task into sub-tasks, each of which is easy to do.</p>
 
 <h4 id="step-1--do-a-google-search-to-see-how-generate-a-random-number-using-c-try-searching-on-rand-c">Step 1 : Do a Google search to see how generate a random number using C++. Try searching on “rand C++”.</h4>
-
-<p>Solution Here:</p>
+<p>You can check out the solution below.</p>
 
 <div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// random.cpp.  Iris Shih</span>
 <span class="c1">// Description: Illustrates how to generate a random number in C++</span>
@@ -257,19 +256,97 @@
   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Your random number:&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">random_number</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
+<h4 id="step-2--we-need-to-receive-an-integer-input-from-the-player-with-appropriate-error-checking-on-cin-and-check-it-against-the-secret-number">Step 2 : We need to receive an integer input from the player (with appropriate error-checking on cin), and check it against the secret number.</h4>
+
+<p>Try and write this part of the game yourself before checking the solution below! :)</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// guess.cpp.  Iris Shih</span>
+<span class="c1">// Description: A guessing game where the player guesses the secret number.</span>
+
+<span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;time.h&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">random_number</span><span class="p">,</span> <span class="n">guess</span><span class="p">;</span>
+
+  <span class="c1">// Initialize random seed.</span>
+  <span class="n">srand</span> <span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
+
+  <span class="c1">// Generate random number between 1 and 100</span>
+  <span class="n">random_number</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Guess our number (1 to 100) &quot;</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">guess</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Please enter only numbers&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">random_number</span> <span class="o">&lt;</span> <span class="n">guess</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;The secret number is lower than &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">guess</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">random_number</span> <span class="o">&gt;</span> <span class="n">guess</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;The secret number is higher than&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">guess</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;You guessed it: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">random_number</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;random: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">random_number</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h4 id="step-3--add-a-loop-that-keeps-collecting-guesses-from-the-player-until-they-finally-guess-the-secret-number">Step 3 : Add a loop that keeps collecting guesses from the player until they finally guess the secret number.</h4>
+
+<p>After completing this part of the program, you can check out the solution below. ;)</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// guess.cpp.  Iris Shih</span>
+<span class="c1">// Description: A guessing game where the player guesses the secret number.</span>
+
+<span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;time.h&gt;</span>
+<span class="cp">#include &lt;cstdlib.h&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">random_number</span><span class="p">,</span> <span class="n">guess</span><span class="p">;</span>
+
+  <span class="c1">// Initialize random seed.</span>
+  <span class="n">srand</span> <span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
+
+  <span class="c1">// Generate random number between 1 and 100</span>
+  <span class="n">random_number</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Guess our number (1 to 100) &quot;</span><span class="p">;</span>
+  <span class="k">do</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">guess</span><span class="p">))</span> <span class="p">{</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Please enter only numbers&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">random_number</span> <span class="o">&lt;</span> <span class="n">guess</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;The secret number is lower than &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">guess</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">random_number</span> <span class="o">&gt;</span> <span class="n">guess</span><span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;The secret number is higher than &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">guess</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">random_number</span> <span class="o">!=</span> <span class="n">guess</span><span class="p">);</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Congratulations!&quot;</span> <span class="o">&lt;&lt;</span>  <span class="n">endl</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><strong>Decomposition</strong> is one of the most important skills for a programmer to learn. Being able to break a task down into manageable pieces, and then complete one at a time is critical, no matter how big or how small the project. Here are some other opportunities for you to practice decomposition.</p>
+
+<ul>
+  <li>The <strong>greatest common divisor</strong> of two integers is the largest number that divides them both evenly. 
+    <ul>
+      <li>For example, gcd(12, 18) = 6, gcd(−4, 14) = 2. </li>
+      <li>The most efficient way to compute gcd is with the <strong>Euclidean algorithm</strong>. </li>
+      <li>Write a program with a function to compute gcd for two integers. Try doing the function without recursion first - it will help you understand how the algorithm works.</li>
+      <li><a href="">Click here</a> to see the solution                                                                                                            </li>
+    </ul>
+  </li>
+</ul>
 
 </div>
 </article>
 <div class=cf></div>
 <div class="row text-center">
 <section class="summer-post-share">
-<a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Let's Learn C++&quot;%20/personal/let's-learn-C++%20via%20&#64;david_dao_" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false" title="Share on Twitter">
+<a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Let's Learn C++ - Getting Start PartI&quot;%20/c++/let's-learn-C++-part1%20via%20&#64;david_dao_" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false" title="Share on Twitter">
 <i class="fa fa-twitter"></i>
 </a>
-<a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/personal/let's-learn-C++" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false" title="Share on Facebook">
+<a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/c++/let's-learn-C++-part1" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false" title="Share on Facebook">
 <i class="fa fa-facebook"></i>
 </a>
-<a class="google-icon" href="https://plus.google.com/share?url=/personal/let's-learn-C++" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false" title="Share on Google+">
+<a class="google-icon" href="https://plus.google.com/share?url=/c++/let's-learn-C++-part1" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false" title="Share on Google+">
 <i class="fa fa-google-plus"></i>
 </a>
 </section>
@@ -292,12 +369,12 @@
 <div class=cf></div>
 <footer class="summer-site-footer">
 <div class="copyright">
-<section>All content copyright <a href="/about">David Dao</a> &copy; 2014 &bull; All rights reserved.</section>
+<section>All content copyright <a href="/about">Iris Shih</a> &copy; 2014 &bull; All rights reserved.</section>
 <section>Proudly published with <a class="icon-ghost" href="https://jekyllrb.com/">Jekyll</a></section>
 </div>
 <div class="social-icons">
 
-<a href="http://twitter.com/david_dao_">
+<a href="http://twitter.com/iriscshih">
 <span class="fa-stack fa-lg">
 <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 <i class="fa fa-twitter fa-stack-1x"></i>
@@ -307,7 +384,7 @@
 
 
 
-<a href="http://github.com/daviddao">
+<a href="http://github.com/IriscShih">
 <span class="fa-stack fa-lg">
 <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 <i class="fa fa-github fa-stack-1x"></i>
@@ -315,7 +392,7 @@
 </a>
 
 
-<a href="http://facebook.com/profile.daviddao">
+<a href="http://facebook.com/iriscShih">
 <span class="fa-stack fa-lg">
 <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 <i class="fa fa-facebook fa-stack-1x"></i>
@@ -325,6 +402,7 @@
 </div>
 <div class="cf"></div>
 </footer>
+    
 </main>
 <script>var twitterAccount="hmfaysal";</script>
 <div class="shareTooltip" id="shareTooltip">
