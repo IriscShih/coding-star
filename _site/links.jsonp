@@ -2,32 +2,37 @@ callback([
 
   {
     "text": "Hello World",
-    "href": "/personal/first-commit"
+    "href": "http://iriscshih.github.io/coding-star/personal/first-commit"
   } ,
 
   {
     "text": "Getting Data with Functional JavaScript",
-    "href": "/javascript/functional-javascript-and-data-science"
+    "href": "http://iriscshih.github.io/coding-star/javascript/functional-javascript-and-data-science"
   } ,
 
   {
     "text": "A Better Console",
-    "href": "/javascript/a-better-console"
+    "href": "http://iriscshih.github.io/coding-star/javascript/a-better-console"
   } ,
 
   {
     "text": "Notes on High-Performance JavaScript",
-    "href": "/javascript/high-performance-javascript"
+    "href": "http://iriscshih.github.io/coding-star/javascript/high-performance-javascript"
   } ,
 
   {
     "text": "Let's Learn C++ - Getting Start PartI",
-    "href": "/c++/let's-learn-C++-part1"
+    "href": "http://iriscshih.github.io/coding-star/c++/let's-learn-C++-part1"
   } ,
 
   {
     "text": "Let's Learn C++ - Getting Start PartII",
-    "href": "/c++/let's-learn-C++-part2"
+    "href": "http://iriscshih.github.io/coding-star/c++/let's-learn-C++-part2"
+  } ,
+
+  {
+    "text": "Let's Learn C++ - Try More Exercises",
+    "href": "http://iriscshih.github.io/coding-star/c++/Let's-learn-C++-part3"
   } 
 
 ])

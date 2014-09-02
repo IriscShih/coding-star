@@ -1,78 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc></loc>
+        <loc>http://iriscshih.github.io/coding-star</loc>
     </url>
     
     
     <url>
-        <loc>/404.html</loc>
+        <loc>http://iriscshih.github.io/coding-star/404.html</loc>
     </url>
     
     <url>
-        <loc>/about/index.html</loc>
+        <loc>http://iriscshih.github.io/coding-star/about/index.html</loc>
     </url>
     
     <url>
-        <loc>/categories/index.html</loc>
+        <loc>http://iriscshih.github.io/coding-star/categories/index.html</loc>
     </url>
     
     <url>
-        <loc>/featured/</loc>
+        <loc>http://iriscshih.github.io/coding-star/featured/</loc>
     </url>
     
     <url>
-        <loc>/index.html</loc>
+        <loc>http://iriscshih.github.io/coding-star/index.html</loc>
     </url>
     
     <url>
-        <loc>/links.jsonp</loc>
+        <loc>http://iriscshih.github.io/coding-star/links.jsonp</loc>
     </url>
     
     <url>
-        <loc>/sitemap.xml</loc>
+        <loc>http://iriscshih.github.io/coding-star/sitemap.xml</loc>
     </url>
     
     <url>
-        <loc>/status-updates-archive/index.html</loc>
+        <loc>http://iriscshih.github.io/coding-star/status-updates-archive/index.html</loc>
     </url>
     
     <url>
-        <loc>/tags/index.html</loc>
+        <loc>http://iriscshih.github.io/coding-star/tags/index.html</loc>
     </url>
     
     <url>
-        <loc>/update-log/index.html</loc>
+        <loc>http://iriscshih.github.io/coding-star/update-log/index.html</loc>
     </url>
     
     <url>
-        <loc>/page2/index.html</loc>
+        <loc>http://iriscshih.github.io/coding-star/page2/index.html</loc>
     </url>
     
 
     
     <url>
-        <loc>/c++/let's-learn-C++-part2</loc>
+        <loc>http://iriscshih.github.io/coding-star/c++/Let's-learn-C++-part3</loc>
     </url>
     
     <url>
-        <loc>/c++/let's-learn-C++-part1</loc>
+        <loc>http://iriscshih.github.io/coding-star/c++/let's-learn-C++-part2</loc>
     </url>
     
     <url>
-        <loc>/javascript/high-performance-javascript</loc>
+        <loc>http://iriscshih.github.io/coding-star/c++/let's-learn-C++-part1</loc>
     </url>
     
     <url>
-        <loc>/javascript/a-better-console</loc>
+        <loc>http://iriscshih.github.io/coding-star/javascript/high-performance-javascript</loc>
     </url>
     
     <url>
-        <loc>/javascript/functional-javascript-and-data-science</loc>
+        <loc>http://iriscshih.github.io/coding-star/javascript/a-better-console</loc>
     </url>
     
     <url>
-        <loc>/personal/first-commit</loc>
+        <loc>http://iriscshih.github.io/coding-star/javascript/functional-javascript-and-data-science</loc>
+    </url>
+    
+    <url>
+        <loc>http://iriscshih.github.io/coding-star/personal/first-commit</loc>
     </url>
     
 </urlset>
