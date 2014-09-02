@@ -9,7 +9,8 @@ comments: true
 published: true
 david: true
 ---
-Notes 
+
+tes 
 =====
 A list of useful links, currently maintained by @daviddao
 
@@ -54,6 +55,10 @@ A detailed introduction to Scala for Java Developers
 [First steps to Scala](http://www.artima.com/scalazine/articles/steps.html)
 A easy and fun first steps in Scala introduction.
 
+## Python
+
+[Google Edu](https://developers.google.com/edu/python/)
+A course for experienced developers, teaching only what is necessary for python
 
 ## Database 
 
@@ -77,6 +82,8 @@ Great story about the struggle of a developer to design high-performance JavaScr
 
 
 ## Data Visualization
+
+[mbostock's D3 Workshop](http://bost.ocks.org/mike/d3/workshop/#0) 150 great slides from the inventor of D3
 
 [D3 Tutorial](http://alignedleft.com/tutorials/d3)
 Great tutorial by Scott Murray about D3. Interactive, simpler than mbostocks tutorial and beautiful made.
@@ -107,5 +114,17 @@ Great and lovely introduction to Python, Javascript, Ruby and so on. A must see!
 
 [MongoUniversity](https://university.mongodb.com/)
 Tutorials about using MongoDB with certificate for Java, Node Developers and co.
+
+[Iversity](https://iversity.org/)
+Mostly german online courses, however all for free
+
+[Canvas Network](https://www.canvas.net/)
+Online courses offered by individuals
+
+[Khan academy](https://www.khanacademy.org/)
+Great online courses by Khan. Great teacher, new technology and easy to understand.
+A variety of topics are covered
+
+
 
 
