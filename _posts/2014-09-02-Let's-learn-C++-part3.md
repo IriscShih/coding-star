@@ -121,6 +121,7 @@ One popular encoding method:
     - encode the months from Jan to Dec as 'A' through 'L'
     - encode each digit of the date as 'Q' through 'Z'
     - encode the year as 'A' through 'Z' meaning 1 through 26 which is then added to 1995.
+    
 Nadine found a particularly questionable loaf of bread with this date: ARZM. Write a program to determine the date.
 
 
