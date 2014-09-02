@@ -1,0 +1,159 @@
+<h2 id="learn-by-example">Learn by Example</h2>
+
+<p>One of the best ways to learn how to program in a new language is by looking at lots and lots of example programs. The best thing to do is to copy and paste each program below into a text file and compile it. Then, try the experiments. By extending these example programs, you will gain familiarity with different aspects fo C++, and you will feel more confident when it comes time to write programs from scratch.</p>
+
+<h3 id="example-1--get-compiler-working">Example 1 : Get Compiler Working</h3>
+
+<p>First of all, let’s have a look at the tutorial of the instructions on compiling, <a href="http://www.arachnoid.com/cpptutor/setup_unix.html">Setting up to compile c++</a>, for getting start with programming in c++.</p>
+
+<p>Before start with the examples, there are few things to notic, however, regarding readibility. This refers to comments and formatting that hekp make programs easy to read, understand, and maintain.</p>
+
+<ul>
+  <li>Every program we write begins with a <strong>header comment</strong> : providing name of the author, their contact information, a short description, and usage(if relevant).</li>
+  <li>Add <strong>explanatory comments</strong>(using full sentences) : whenever the code does not document itself. (i.e. if the processing is tricky, non-obvious, interesting, or important.)</li>
+  <li>Always use <strong>descriptive names</strong> : 
+    <ul>
+      <li>Variables are lower-case words separated by _, as in my_variable. </li>
+      <li>Function names use upper-case letters to mark words, as in MyExcitingFunction(). </li>
+      <li>Constants start with a “k” and use upper-case letters to mark words, as in kDaysInWeek.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Okay, let’s try the following classic program to see whether your compiler works or not!</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// hello.cpp: Iris Shih</span>
+<span class="c1">// Description: a program that prints the immortal saying &quot;hello world&quot;</span>
+
+<span class="cp">#include &lt;iostream&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+ <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello World!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>The most important thing is to make sure you can compile and run this program. Then, we can try some more interesting experiments:</p>
+
+<ul>
+  <li>Modify the above program to print out “Hello World!” 4 times on a line for 6 lines, where each is printed in a field of 17 spaes. (By using <strong>for-loops</strong> to do this.)
+    <ul>
+      <li><a href="http://www.cplusplus.com/reference/ostream/ostream/">Click here</a> to learn about formatting output with cout.</li>
+      <li><a href="">Click here</a> to see the solution. :)</li>
+    </ul>
+  </li>
+  <li>Using the program you just completed, figure out how to print out “Hello World!” left-aligned in the field of 17 spaces.(The default is usually right-aligned)
+    <ul>
+      <li><a href="">Click here</a> to see the solution.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="example-2--try-some-input">Example 2 : Try some Input</h3>
+
+<p>It’s easy to get input from the keyboard in C++ using cin. Here is an example:</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// get_input.cpp: Iris Shih</span>
+<span class="c1">// Description: Illustrate the use of cin to get input.</span>
+
+<span class="cp">#include &lt;iostream&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+ <span class="kt">int</span> <span class="n">input_var</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+ 
+ <span class="c1">// Enter the do while loop and stay there until either a non-numeric is entered, </span>
+ <span class="c1">// or -1 is entered. Note that cin will accept any integer, 4, 40, 400, etc.</span>
+ <span class="k">do</span> <span class="p">{</span>
+ <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Enter a number (-1 = quit): &quot;</span><span class="p">;</span>
+ 
+ <span class="c1">// The following line accepts input from the keyboard into variable input_var.</span>
+ <span class="c1">// cin returns false if an input operation fails, that is, if</span>
+ <span class="c1">// something other than an int (the type of input_var) is entered.</span>
+ <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">input_var</span><span class="p">))</span> <span class="p">{</span>
+ <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;You entered a non-numeric. Exiting...&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+ <span class="k">break</span><span class="p">;</span>
+ <span class="c1">// exit the do while loop</span>
+ <span class="p">}</span>
+ <span class="k">if</span> <span class="p">(</span><span class="n">input_var</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;You entered &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">input_var</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">input_var</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+ <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;All done.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>An experiment:</p>
+
+<ul>
+  <li>When an input error is made, the stream “breaks,” cin returns false, and the program stops. It’s very important to guard against such errors as we did in the program above. </li>
+  <li>But what if we want to recover from the error, rather than have the program stop? There are two steps to recovering from an error:
+    <ol>
+      <li>Clear the error with cin.clear().</li>
+      <li>Remove the incorrect characters from the stream. One way to do this is with cin.ignore().</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="example-3--what-is-the-output">Example 3 : What is the Output?</h3>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cp">#include &lt;iostream&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; 1</span><span class="se">\t</span><span class="s">2</span><span class="se">\t</span><span class="s">3</span><span class="se">\t</span><span class="s">4</span><span class="se">\t</span><span class="s">5</span><span class="se">\t</span><span class="s">6</span><span class="se">\t</span><span class="s">7</span><span class="se">\t</span><span class="s">8</span><span class="se">\t</span><span class="s">9&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+ <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;| &quot;</span><span class="p">;</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">*</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\t&#39;</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="example-4--decomposing-makes-everything-easier-">Example 4 : Decomposing makes everything easier… ;)</h3>
+
+<p>It’s time for having some fun! Let’s try to write a computer game. This first one will be a bit simple, but it’s a start. </p>
+
+<p>Our task is to write a program that implements a guessing game. </p>
+
+<ul>
+  <li>It generates a random number between 0 to 100. </li>
+  <li>The player must guess the secret numnber. </li>
+  <li>The program provides hints like “that’s too high” or “that’s too low” until the player finally guesses the secret number. </li>
+</ul>
+
+<p>We will work on this game in 3 steps:</p>
+
+<ol>
+  <li>Figure out how to generate a random number within a given range of values.</li>
+  <li>Create a main function that processes one guess from the player, and provides hints.</li>
+  <li>Add what we need to allow for multiple guesses until the player guesses the number.</li>
+</ol>
+
+<p>This process of development is called <strong>decomposition</strong>, which means breaking a task into sub-tasks, each of which is easy to do.</p>
+
+<h4 id="step-1--do-a-google-search-to-see-how-generate-a-random-number-using-c-try-searching-on-rand-c">Step 1 : Do a Google search to see how generate a random number using C++. Try searching on “rand C++”.</h4>
+
+<p>Solution Here:</p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// random.cpp.  Iris Shih</span>
+<span class="c1">// Description: Illustrates how to generate a random number in C++</span>
+
+<span class="cp">#include &lt;iostream&gt;</span>
+<span class="cp">#include &lt;time.h&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">random_number</span><span class="p">;</span>
+
+  <span class="c1">// Initialize random seed.</span>
+  <span class="n">srand</span> <span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
+
+  <span class="c1">// Generate random number between 1 and 100</span>
+  <span class="n">random_number</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Your random number:&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">random_number</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+

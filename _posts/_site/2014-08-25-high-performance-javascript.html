@@ -1,0 +1,29 @@
+<p>High-Performance JavaScript? Can JavaScript compete or even be faster than C?
+This post is inspired by reading Felix Geisendörfer’s <a href="https://github.com/felixge/faster-than-c">Post</a>.
+First we will discuss about methods finding out, how to test the performance of your code in general:</p>
+
+<h2 id="profiling-and-benchmarking">Profiling and Benchmarking</h2>
+<p>Profiling is useful, when you consider a functional approach in JavaScript.
+Node allows you to inspect the speed of your program by using </p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">node</span> <span class="o">--</span><span class="nx">prof</span></code></pre></div>
+
+<p>which creates a V8.log.
+It will show you how long a specific function needs in your program. Perfect to fix bottlenecks.
+However this approach has some issues - As mentioned, it won’t help much, if you decide a more infunctional javascript approach and put everything in one function.</p>
+
+<h2 id="benchmark-driven-development">Benchmark Driven Development</h2>
+<p>Benchmarks are the oldest and still best way to test for speed.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">start</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+	<span class="nx">function_to_test</span><span class="p">();</span>
+	<span class="kd">var</span> <span class="nx">duration</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">-</span> <span class="nx">start</span><span class="p">;</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">duration</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="v8---the-magic-machine">V8 - the magic machine</h2>
+<p>Node is build on basis of V8. V8 is Chrome and Google’s Magic JavaScript Engine.
+Speaking, it converts JavaScript insanely fast into assembly (machine code)
+V8 is written in C++ and I will go into V8 into detail in the next post :)</p>
+
