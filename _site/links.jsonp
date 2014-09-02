@@ -31,6 +31,11 @@ callback([
   } ,
 
   {
+    "text": "Notes on Data Science",
+    "href": "http://iriscshih.github.io/coding-star/tutorial/useful-links"
+  } ,
+
+  {
     "text": "Let's Learn C++ - Try More Exercises",
     "href": "http://iriscshih.github.io/coding-star/c++/Let's-learn-C++-part3"
   } 
