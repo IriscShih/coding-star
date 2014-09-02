@@ -16,7 +16,7 @@ david: false
 iris: true
 ---
 
-The following exercises will give you more practice with basic C++. The solutions will be provided in the next blog. :)
+The following exercises will give you more practice with basic C++. The solutions will be provided in the next post of Let's Learn C++ session. :)
 
 
 ###Exercise 1
