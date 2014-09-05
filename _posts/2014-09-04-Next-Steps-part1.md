@@ -57,15 +57,19 @@ Consider the following output from a simple game:
         
 The Fire procedure handles the pkaying of the game. In that function, we call a random number generator to get the enemy distance, and then set up the loop to get the player's input and calculate whether or not they have hit the enemy. The guard condition on the loop is how close we hvae gotten to hit the enemy.
 
-        In case you are a little rusty on physics, here are the calculations:
+----------------------------------------------
+{% highlight c++%}
+In case you are a little rusty on physics, here are the calculations:
 
-        Velocity = 200.0; // initial velocity of 200 ft/sec
-        Gravity = 32.2; // gravity for distance calculation
+Velocity = 200.0; // initial velocity of 200 ft/sec
+Gravity = 32.2; // gravity for distance calculation
 
-        // in_angle is the angle the player has entered, converted to radians.
-        time_in_air = (2.0 * Velocity * sin(in_angle)) / Gravity;
-        distance = round((Velocity * cos(in_angle)) * time_in_air);
-        
+// in_angle is the angle the player has entered, converted to radians.
+time_in_air = (2.0 * Velocity * sin(in_angle)) / Gravity;
+distance = round((Velocity * cos(in_angle)) * time_in_air);
+{% endhighlight %}
+----------------------------------------------
+
 Because of the calls to cos() and sin(), you will need to include math.h.
 
 Try writing this program - it's great practice in problem decomposition and a good review of basic C++. Remember to only do one task in each function. This is the most sophisticated program we have written thus far, so it may take you a little time to do it. 
