@@ -87,9 +87,11 @@ There are four things to remember when working with pointers:
     * Just as data is modified when a normal variable is used, the value of the address stored in a pointer is modified as a pointer variable is manipulated. 
     * Here's an example:
     
-        int *intptr; // Declare a pointer that holds the address of a memory location that can store an integer. Note the use of * to                   // indicate this is a pointer variable.
-        intptr = new int; // Allocate memory for the integer.
-        *intptr = 5; // Store 5 in the memory address stored in intptr.
+    {% highlight c++%}
+    int *intptr; // Declare a pointer that holds the address of a memory location that can store an integer. Note the use of * to                   // indicate this is a pointer variable.
+    intptr = new int; // Allocate memory for the integer.
+    *intptr = 5; // Store 5 in the memory address stored in intptr.
+    {% endhighlight %}
     
 2. We usually say that a pointer **"points"** to the location it is storing (the "pointee"). So in the example above, intptr points to the pointee 5.
 
