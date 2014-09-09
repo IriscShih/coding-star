@@ -88,7 +88,7 @@ There are four things to remember when working with pointers:
     * Here's an example:
     
     {% highlight c++%}
-    int *intptr; // Declare a pointer that holds the address of a memory location that can store an integer. Note the use of * to                   // indicate this is a pointer variable.
+    int *intptr; // Declare a pointer that holds the address of a memory location that can store an integer. Note the use of * to indicate this is a pointer variable.
     intptr = new int; // Allocate memory for the integer.
     *intptr = 5; // Store 5 in the memory address stored in intptr.
     {% endhighlight %}
