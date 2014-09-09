@@ -75,3 +75,28 @@ Because of the calls to cos() and sin(), you will need to include math.h.
 Try writing this program - it's great practice in problem decomposition and a good review of basic C++. Remember to only do one task in each function. This is the most sophisticated program we have written thus far, so it may take you a little time to do it. 
 
 [Click Here]() to see the solution.
+
+
+####Example #2: Practice with Pointers
+
+There are four things to remember when working with pointers:
+
+1. Pointers are variables that hold memory addresses. 
+    * As a program is executing, all variables are stored in memory, each at its own unique address or location. 
+    * A pointer is a special type of variable that contains a memory address rather than a data value. 
+    * Just as data is modified when a normal variable is used, the value of the address stored in a pointer is modified as a pointer variable is manipulated. 
+    * Here's an example:
+    
+----------------------------------------------
+{% highlight c++%}
+
+ int *intptr; // Declare a pointer that holds the address of a memory location that can store an integer. Note the use of * to indicate this is a pointer variable.
+
+intptr = new int; // Allocate memory for the integer.
+*intptr = 5; // Store 5 in the memory address stored in intptr.
+
+{% endhighlight %}
+----------------------------------------------
+
+2. We usually say that a pointer **"points"** to the location it is storing (the "pointee"). So in the example above, intptr points to the pointee 5. 
+
