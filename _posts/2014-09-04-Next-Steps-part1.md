@@ -116,7 +116,7 @@ The * operator is used for dereferencing in C. One of the most common errors C/C
 * **3rd** : Pointer assignment between two pointers makes them point to the same pointee. 
     - So the assignment y = x; makes y point to the same pointee as x. 
     - Pointer assignment does not touch the pointee. It just changes one pointer to have the same location as another pointer. 
-    - After pointer assignment, the two pointers "share" the pointee. <br> ![](/images/point2.png)
+    - After pointer assignment, the two pointers "share" the pointee. <br> ![]({{ site.url }}/images/point2.png)
     
 ----------------------------------------------
 {% highlight c++%}
@@ -140,12 +140,12 @@ void main() {
 
 Here is a trace of this code:
 
-* Allocate two pointers x and y. Allocating the pointers does not allocate any pointees. <br>![](/images/point3.png)
-* Allocate a pointee and set x to point to it. <br>![](/images/point4.png)
-* Dereference x to store 42 in its pointee. This is a basic example of the dereference operation. Start at x, follow the arrow over to access its pointee.<br>![](/images/point5.png)
-* Try to dereference y to store 13 in its pointee. This crashes because y does not have a pointee -- it was never assigned one.<br>![](/images/point6.png)
-* Assign y = x; so that y points to x's pointee. Now x and y point to the same pointee -- they are "sharing".<br>![](/images/point7.png)
-* Try to dereference y to store 13 in its pointee. This time it works, because the previous assignment gave y a pointee.<br>![](/images/point8.png)
+* Allocate two pointers x and y. Allocating the pointers does not allocate any pointees. <br>![]({{ site.url }}/images/point3.png)
+* Allocate a pointee and set x to point to it. <br>![]({{ site.url }}/images/point4.png)
+* Dereference x to store 42 in its pointee. This is a basic example of the dereference operation. Start at x, follow the arrow over to access its pointee.<br>![]({{ site.url }}/images/point5.png)
+* Try to dereference y to store 13 in its pointee. This crashes because y does not have a pointee -- it was never assigned one.<br>![]({{ site.url }}/images/point6.png)
+* Assign y = x; so that y points to x's pointee. Now x and y point to the same pointee -- they are "sharing".<br>![]({{ site.url }}/images/point7.png)
+* Try to dereference y to store 13 in its pointee. This time it works, because the previous assignment gave y a pointee.<br>![]({{ site.url }}/images/point8.png)
 
 As you can see, pictures are very help in understanding pointer usage. Here is another example.
 
