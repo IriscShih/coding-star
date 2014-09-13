@@ -277,3 +277,67 @@ void DoIt(int &foo, int goo) {
 ----------------------------------------------
 
 Run the program to see whether you got the correct answer or not! ;)
+
+
+####Example 3 : Passing Values by Reference
+
+Write a function called **accelerate()** that takes as input the speed of a vehicle, and an amout. 
+- The function adds the amount to the speed to accelerate the vehicle. 
+- The speed parameter should be passed by refernece, and amount by value.
+- [Click Here]() for the solution!
+
+
+####Example 4 : Classes and Objects
+
+Consider the following class:
+
+----------------------------------------------
+{% highlight c++%}
+// time.cpp, Iris Shih
+// Description: A simple time class.
+
+#include <iostream>
+using namespace std;
+
+class Time {
+ private:
+ int hours_;
+ int minutes_;
+ int seconds_;
+ public:
+ void set(int h, int m, int s) {hours_ = h; minutes_ = m; seconds_ = s; return;}
+ void increment(void);
+ void display(void);
+};
+
+void Time::increment (void) {
+ seconds_++;
+ minutes_ += seconds_/60;
+ hours_ += minutes_/60;
+ seconds_ %= 60;
+ minutes_ %= 60;
+ hours_ %= 24;
+ return;
+}
+
+void Time::display() {
+ cout << (hours_ % 12 ? hours_ % 12:12) << ':' <<
+ (minutes_ < 10 ? "0" :"") << minutes_ << ':' <<
+ (seconds_ < 10 ? "0" :"") << seconds_ <<
+ (hours_ < 12 ? " AM" : " PM") << endl;
+}
+
+int main(void) {
+ Time timer; timer.set(23,59,58);
+ for (int i = 0; i < 5; i++) {
+ timer.increment();
+ timer.display();
+ cout << endl;
+ }
+}
+{% endhighlight %}
+----------------------------------------------
+
+> **Notice that class member variables have a trailing underscore. This is dont to differentiate between local variables and class variables**
+
+Add a decrement method to this class! [Click Here]() to have a look at the solution. :)
