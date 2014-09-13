@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LET'S LEARN C++ - NEXT STEPS | CODING STAR</title>
+<meta name="description" content="Welcome to C++ learning session! :)">
+<meta name="keywords" content="blogging, c++, start">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:title" content="Let's Learn C++ - Next steps">
+<meta name="twitter:description" content="Welcome to C++ learning session! :)">
+<meta name="twitter:creator" content="@david_dao_">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Let's Learn C++ - Next steps">
+<meta property="og:description" content="Welcome to C++ learning session! :)">
+<meta property="og:url" content="/c++/Next-Steps-part1">
+<meta property="og:site_name" content="Coding Star">
+<meta property="og:image" content="/images/">
+
+
+
+<link rel="canonical" href="/c++/Next-Steps-part1">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Coding Star Feed">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/css/vendor/normalize-production.css">
+<link rel="stylesheet" href="/assets/css/vendor/foundation.min.css">
+
+<link rel="stylesheet" href="/assets/css/style-production.css">
+<link rel="stylesheet" href="/assets/css/post-production.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>/*<![CDATA[*/window.jQuery||document.write('<script src="/assets/js/vendor/jquery-1.11.1.min.js"><\/script>');/*]]>*/</script>
+
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+<body class=post-template itemscope itemtype=http://schema.org/WebPage>
+
+<main id=summer-post-container-simple class=summer-post-container-simple role=main itemscope itemtype=http://schema.org/Article>
+<header class=summer-post-header-simple>
+<div class=summer-post-menu-header-simple>
+
+
+<a class=summer-blog-logo href=""><img src="/images/logo.png" alt="Blog Logo" /></a>
+
+<div class=summer-blog-menu>
+<div class="summer-mobile-menu show-for-small">
+<a href=#><i class="fa fa-bars"></i></a>
+</div>
+<ul class=summer-menu>
+<li class="summer-mobile-close-btn show-for-small text-right">
+<a href=#><i class="fa fa-times"></i></a>
+</li>
+
+<li>
+<a href="/">Home</a>
+ </li>
+
+<li>
+<a href="/featured">Featured Posts</a>
+ </li>
+
+<li>
+<a href="/categories">Categories</a>
+ </li>
+
+<li>
+<a href="/about">About</a>
+ </li>
+
+</ul>
+</div>
+</div>
+
+<div class="summer-post-title-simple row">
+<div class="small-12 columns">
+<div class=summer-post-meta-simple>
+<h1 itemprop=name><i class="fa fa-star-half-o fa-spin"></i>&nbsp;Let's Learn C++ - Next steps</h1>
+<p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name> Iris Shih</strong></span> &#8212; on <span itemprop=articleSection><a href="/tags/index.html#blogging" title="Posts tagged with blogging" rel=tag>blogging</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#c++" title="Posts tagged with c++" rel=tag>c++</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#start" title="Posts tagged with start" rel=tag>start</a></span> <strong><time datetime="2014-09-04T00:00:00+02:00" itemprop=datePublished>04 Sep 2014</time></strong></p>
+<strong><i>&quot;Welcome to C++ learning session! :)&quot;</i></strong>
+</div>
+</div>
+</div>
+</header>
+
+<article class="summer-post-content post tag-simple" itemscope itemtype=http://schema.org/BlogPosting>
+<div itemprop=articleBody><h3 id="introduction-to-programming-and-c">Introduction to Programming and C++</h3>
+
+<p>C++ is an object-oriented programming language. 
+…
+Our focus in this module will be on using pointers, and getting started with objects.</p>
+
+<h3 id="learn-by-example-2">Learn by Example #2</h3>
+
+<p>Our focus in this module is on obtaining more practice with <strong>decomposition</strong>, understanding <strong>pointers</strong>, and getting started with <strong>objects &amp; classes</strong>. </p>
+
+<p>Work through the following examples. Write the programs yourself when asked, or do the experiments. I can’t emphasize enough, just keep this in mind that the key to becoming a good programmer is practice, practice, practice!</p>
+
+<h4 id="example-1-more-decomposition-practice">Example #1: More Decomposition Practice</h4>
+
+<p>Consider the following output from a simple game:</p>
+
+<pre><code>    Welcome to Artillery.
+    You are in the middle of a war and being charged by thousands of enemies.
+    You have one cannon, which you can shoot at any angle.
+    You only have 10 cannonballs for this target..
+    Let's begin...
+
+    The enemy is 507 feet away!!!
+    What angle? 25&lt;
+    You over shot by 445
+    What angle? 15
+    You over shot by 114
+    What angle? 10
+    You under shot by 82
+    What angle? 12
+    You under shot by 2
+    What angle? 12.01
+    You hit him!!!
+    It took you 4 shots.
+    You have killed 1 enemy.
+    I see another one, are you ready? (Y/N) n
+
+    You killed 1 of the enemy.
+</code></pre>
+
+<p>The Fire procedure handles the pkaying of the game. In that function, we call a random number generator to get the enemy distance, and then set up the loop to get the player’s input and calculate whether or not they have hit the enemy. The guard condition on the loop is how close we hvae gotten to hit the enemy.</p>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">In</span> <span class="k">case</span> <span class="n">you</span> <span class="n">are</span> <span class="n">a</span> <span class="n">little</span> <span class="n">rusty</span> <span class="n">on</span> <span class="n">physics</span><span class="p">,</span> <span class="n">here</span> <span class="n">are</span> <span class="n">the</span> <span class="nl">calculations</span><span class="p">:</span>
+
+<span class="n">Velocity</span> <span class="o">=</span> <span class="mf">200.0</span><span class="p">;</span> <span class="c1">// initial velocity of 200 ft/sec</span>
+<span class="n">Gravity</span> <span class="o">=</span> <span class="mf">32.2</span><span class="p">;</span> <span class="c1">// gravity for distance calculation</span>
+
+<span class="c1">// in_angle is the angle the player has entered, converted to radians.</span>
+<span class="n">time_in_air</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">Velocity</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">in_angle</span><span class="p">))</span> <span class="o">/</span> <span class="n">Gravity</span><span class="p">;</span>
+<span class="n">distance</span> <span class="o">=</span> <span class="n">round</span><span class="p">((</span><span class="n">Velocity</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">in_angle</span><span class="p">))</span> <span class="o">*</span> <span class="n">time_in_air</span><span class="p">);</span></code></pre></div>
+
+<hr />
+
+<p>Because of the calls to cos() and sin(), you will need to include math.h.</p>
+
+<p>Try writing this program - it’s great practice in problem decomposition and a good review of basic C++. Remember to only do one task in each function. This is the most sophisticated program we have written thus far, so it may take you a little time to do it. </p>
+
+<p><a href="">Click Here</a> to see the solution.</p>
+
+<h4 id="example-2-practice-with-pointers">Example #2: Practice with Pointers</h4>
+
+<p>There are four things to remember when working with pointers:</p>
+
+<ul>
+  <li><strong>1st</strong> : Pointers are varables that hole memory address. 
+    <ul>
+      <li>As a program is executing, all variablrs are stored in memory, each at its own unique address or location.</li>
+      <li>A pointer is a special type of variable that contains a memory address rather than a data value. Just as data is modified when a normal variable is used, the value of the address stored in a pointer is modified as a pointer variable is manipulated. </li>
+      <li>Here’s an example:</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">int</span> <span class="o">*</span><span class="n">intptr</span><span class="p">;</span> <span class="c1">// Declare a pointer that holds the address</span>
+         <span class="c1">// of a memory location that can store an integer.</span>
+         <span class="c1">// Note the use of * to indicate this is a pointer variable.</span>
+
+        <span class="n">intptr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span> <span class="c1">// Allocate memory for the integer.</span>
+        <span class="o">*</span><span class="n">intptr</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// Store 5 in the memory address stored in intptr.</span></code></pre></div>
+
+<hr />
+
+<ul>
+  <li><strong>2nd</strong> : We usually say that a pointer “points” to the location it is storing (the “pointee”). So in the example above, intptr points to the pointee 5.<br /> <img src="/images/point1.png" alt="" />
+    <ul>
+      <li>Notice the use of the “new” operator to allocate memory for our integer pointee. This is something we must do before trying to access the pointee.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">int</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span> <span class="c1">// Declare integer pointer.</span>
+        <span class="n">ptr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span> <span class="c1">// Allocate some memory for the integer.</span>
+        <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="c1">// Dereference to initialize the pointee.</span>
+        <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// We are dereferencing ptr in order</span>
+         <span class="c1">// to add one to the value stored</span>
+         <span class="c1">// at the ptr address.</span></code></pre></div>
+
+<hr />
+
+<p>The * operator is used for dereferencing in C. One of the most common errors C/C++ programmers make in working with pointers is <strong>forgetting to initialize the pointee</strong>. This can sometimes cause a runtime crash because we are accessing a location in memory that contains unknown data. If we try and modify this data, we can cause subtle memory corruption making it a hard bug to track down.</p>
+
+<ul>
+  <li><strong>3rd</strong> : Pointer assignment between two pointers makes them point to the same pointee. 
+    <ul>
+      <li>So the assignment y = x; makes y point to the same pointee as x. </li>
+      <li>Pointer assignment does not touch the pointee. It just changes one pointer to have the same location as another pointer. </li>
+      <li>After pointer assignment, the two pointers “share” the pointee. <br /> <img src="/images/point2.png" alt="" /></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+ <span class="kt">int</span><span class="o">*</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// Allocate the pointers x and y</span>
+ <span class="kt">int</span><span class="o">*</span> <span class="n">y</span><span class="p">;</span> <span class="c1">// (but not the pointees).</span>
+
+ <span class="n">x</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span> <span class="c1">// Allocate an int pointee and set x to point to it.</span>
+
+ <span class="o">*</span><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span> <span class="c1">// Dereference x and store 42 in its pointee</span>
+
+ <span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span> <span class="c1">// CRASH -- y does not have a pointee yet</span>
+
+ <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// Pointer assignment sets y to point to x&#39;s pointee</span>
+
+ <span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span> <span class="c1">// Dereference y to store 13 in its (shared) pointee</span>
+<span class="p">}</span></code></pre></div>
+
+<hr />
+
+<p>Here is a trace of this code:</p>
+
+<ul>
+  <li>Allocate two pointers x and y. Allocating the pointers does not allocate any pointees. <br /><img src="/images/point3.png" alt="" /></li>
+  <li>Allocate a pointee and set x to point to it. <br /><img src="/images/point4.png" alt="" /></li>
+  <li>Dereference x to store 42 in its pointee. This is a basic example of the dereference operation. Start at x, follow the arrow over to access its pointee.<br /><img src="/images/point5.png" alt="" /></li>
+  <li>Try to dereference y to store 13 in its pointee. This crashes because y does not have a pointee – it was never assigned one.<br /><img src="/images/point6.png" alt="" /></li>
+  <li>Assign y = x; so that y points to x’s pointee. Now x and y point to the same pointee – they are “sharing”.<br /><img src="/images/point7.png" alt="" /></li>
+  <li>Try to dereference y to store 13 in its pointee. This time it works, because the previous assignment gave y a pointee.<br /><img src="/images/point8.png" alt="" /></li>
+</ul>
+
+<p>As you can see, pictures are very help in understanding pointer usage. Here is another example.</p>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">int</span> <span class="n">my_int</span> <span class="o">=</span> <span class="mi">46</span><span class="p">;</span> <span class="c1">// Declare a normal integer variable.</span>
+<span class="c1">// Set it to equal 46.</span>
+
+<span class="c1">// Declare a pointer and make it point to the variable my_int</span>
+<span class="c1">// by using the address-of operator.</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">my_pointer</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">my_int</span><span class="p">;</span>
+
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">my_int</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Displays 46.</span>
+
+<span class="o">*</span><span class="n">my_pointer</span> <span class="o">=</span> <span class="mi">107</span><span class="p">;</span> <span class="c1">// Derefence and modify the variable.</span>
+
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">my_int</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Displays 107.</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">my_pointer</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// Also 107.</span></code></pre></div>
+
+<hr />
+
+<p>Notice in this example that we never allocated memory with the “new” operator. We declared a normal integer variable and manipulated it via pointers.</p>
+
+<p>In the example below, we illustrate the use of the <strong>delete operator</strong> which de-allocates heap memory, and how we can allocate for more complex structures. We will cover memory organization (heap and runtime stack) in the another lesson. For now, just think of the heap as a free store of memory available to running programs.</p>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">int</span> <span class="o">*</span><span class="n">ptr1</span><span class="p">;</span> <span class="c1">// Declare a pointer to int.</span>
+<span class="n">ptr1</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span> <span class="c1">// Reserve storage and point to it.</span>
+
+<span class="kt">float</span> <span class="o">*</span><span class="n">ptr2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="p">;</span> <span class="c1">// Do it all in one statement.</span>
+
+<span class="k">delete</span> <span class="n">ptr1</span><span class="p">;</span> <span class="c1">// Free the storage.</span>
+<span class="k">delete</span> <span class="n">ptr2</span><span class="p">;</span></code></pre></div>
+
+<hr />
+
+<p>In the final example below, we show how pointers are used to <strong>pass values by reference</strong> to a function. This is how we modify the values of variables within a function.</p>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// Passing parameters by reference.</span>
+<span class="cp">#include &lt;iostream&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">Duplicate</span><span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">a</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
+ <span class="n">b</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
+ <span class="n">c</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+ <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+ <span class="n">Duplicate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>
+ <span class="c1">// The following outputs: x=2, y=6, z=14.</span>
+ <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="s">&quot;x=&quot;</span><span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, y=&quot;</span><span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, z=&quot;</span><span class="o">&lt;&lt;</span> <span class="n">z</span><span class="p">;</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<hr />
+
+<p>If we were to leave the <strong>&amp;’s</strong> off the arguments in the Duplicate function definition:</p>
+
+<ul>
+  <li>Pass the variables “by value”
+    <ul>
+      <li>i.e., a copy is made of the variable. Any changes made to the variable in the function modify the copy. They do not modify the original variable.</li>
+    </ul>
+  </li>
+  <li>Pass the variable “by reference”
+    <ul>
+      <li>In this case, we are not passing a copy of its value, we are passing the address of the variable to the function. </li>
+      <li>Any modificaton that we do to the local variable actually modifies the orginal variable passed in. 
+<br />  <br />
+<br />
+If you are a C programmer, this is a new twist. </li>
+    </ul>
+  </li>
+  <li>We could do the same in C by 
+    <ul>
+      <li>declaring <strong>Duplicate()</strong> as <strong>Duplicate(int *x)</strong>, in which case x is a pointer to an int</li>
+      <li>then, calling <strong>Duplicate()</strong> with argument <strong>&amp;x</strong> (address-of <strong>x</strong>)</li>
+      <li>and, using de-referencing of <strong>x</strong> within <strong>Duplicate()</strong> (see below). </li>
+    </ul>
+  </li>
+</ul>
+
+<p>But C++ provides a simpler way of passing values to functions by reference, even though the old “C” way of doing it still works.</p>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">void</span> <span class="nf">Duplicate</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+  <span class="o">*</span><span class="n">a</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="o">*</span><span class="n">b</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="o">*</span><span class="n">c</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+  <span class="n">Duplicate</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">);</span>
+  <span class="c1">// The following outputs: x=2, y=6, z=14.</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;x=&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, y=&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;, z=&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">z</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<hr />
+
+<p>Notice with C++ references, we do not need to pass the address of a variable, nor do we need to dereference the variable inside the called function.</p>
+
+<p>What does the following program output? Try to draw a picture of memory to figure it out. :)</p>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">void</span> <span class="nf">DoIt</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">foo</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goo</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+ <span class="kt">int</span> <span class="o">*</span><span class="n">foo</span><span class="p">,</span> <span class="o">*</span><span class="n">goo</span><span class="p">;</span>
+ <span class="n">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span>
+ <span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+ <span class="n">goo</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span>
+ <span class="o">*</span><span class="n">goo</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+ <span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="o">*</span><span class="n">goo</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
+ <span class="n">foo</span> <span class="o">=</span> <span class="n">goo</span><span class="p">;</span>
+ <span class="o">*</span><span class="n">goo</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+ <span class="o">*</span><span class="n">foo</span> <span class="o">=</span> <span class="o">*</span><span class="n">goo</span> <span class="o">+</span> <span class="o">*</span><span class="n">foo</span><span class="p">;</span>
+ <span class="n">DoIt</span><span class="p">(</span><span class="o">*</span><span class="n">foo</span><span class="p">,</span> <span class="o">*</span><span class="n">goo</span><span class="p">);</span>
+ <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="o">*</span><span class="n">foo</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">DoIt</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">foo</span><span class="p">,</span> <span class="kt">int</span> <span class="n">goo</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">foo</span> <span class="o">=</span> <span class="n">goo</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
+ <span class="n">goo</span> <span class="o">=</span> <span class="n">foo</span> <span class="o">+</span> <span class="mi">4</span><span class="p">;</span>
+ <span class="n">foo</span> <span class="o">=</span> <span class="n">goo</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
+ <span class="n">goo</span> <span class="o">=</span> <span class="n">foo</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<hr />
+
+</div>
+</article>
+<div class=cf></div>
+<div class="row text-center">
+<section class="summer-post-share">
+<a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Let's Learn C++ - Next steps&quot;%20/c++/Next-Steps-part1%20via%20&#64;david_dao_" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false" title="Share on Twitter">
+<i class="fa fa-twitter"></i>
+</a>
+<a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/c++/Next-Steps-part1" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false" title="Share on Facebook">
+<i class="fa fa-facebook"></i>
+</a>
+<a class="google-icon" href="https://plus.google.com/share?url=/c++/Next-Steps-part1" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false" title="Share on Google+">
+<i class="fa fa-google-plus"></i>
+</a>
+</section>
+</div>
+<div class=cf></div>
+
+<div class="summer-author-info">
+<div class="row">
+<section class="summer-post-author small-12 columns">
+<img src="/images/irisshih.jpg" class="summer-post-author-avatar" alt="Iris Shih's photo" itemprop="image">
+<span class="author-label">Author</span>
+<h1>Iris Shih</h1>
+<p><a href="mailto:iris.cshih@gmail.com" class="author-website">iris.cshih@gmail.com</a></p>
+<p>Master of Informatics student in Technical University Munich, major in computer vision and biomedical computing. I am facinated in data visualization, imaging processing and machine learning.</p>
+</section>
+</div>
+</div>
+<div class=cf></div>
+
+<div class=cf></div>
+<footer class="summer-site-footer">
+<div class="copyright">
+<section>All content copyright <a href="/about">Iris Shih</a> &copy; 2014 &bull; All rights reserved.</section>
+<section>Proudly published with <a class="icon-ghost" href="https://jekyllrb.com/">Jekyll</a></section>
+</div>
+<div class="social-icons">
+
+<a href="http://twitter.com/iriscshih">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+</a>
+
+
+
+
+<a href="http://github.com/IriscShih">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-github fa-stack-1x"></i>
+</span>
+</a>
+
+
+<a href="http://facebook.com/iriscShih">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-facebook fa-stack-1x"></i>
+</span>
+</a>
+
+</div>
+<div class="cf"></div>
+</footer>
+    
+</main>
+<script>var twitterAccount="hmfaysal";</script>
+<div class="shareTooltip" id="shareTooltip">
+<div class="tooltipContainer"><a id="sendToTwitter" href="" class="sharingLink twitter"><span></span></a></div>
+</div>
+<script>!function(f,a,g){var e,b=f.getElementsByTagName(a)[0],c=/^http:/.test(f.location)?"http":"https";if(!f.getElementById(g)){e=f.createElement(a);e.id=g;e.src=c+"://platform.twitter.com/widgets.js";b.parentNode.insertBefore(e,b)}}(document,"script","twitter-wjs");</script>
+<script src="/assets/js/vendor/modernizr.js"></script>
+<script src="/assets/js/foundation.min.js"></script>
+
+<script src="/assets/js/summer.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+<script src="/assets/js/vendor/selectshare.js"></script>
+<script type='text/javascript'>$(document).foundation();</script>
+<script type='text/javascript'>$(document).ready(function(){$(".time").text(function(a,b){return Math.round(parseFloat(b))})});</script>
+
+</body>
+</html>
