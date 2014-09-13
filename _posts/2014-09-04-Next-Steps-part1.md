@@ -282,6 +282,7 @@ Run the program to see whether you got the correct answer or not! ;)
 ####Example 3 : Passing Values by Reference
 
 Write a function called **accelerate()** that takes as input the speed of a vehicle, and an amout. 
+
 - The function adds the amount to the speed to accelerate the vehicle. 
 - The speed parameter should be passed by refernece, and amount by value.
 - [Click Here]() for the solution!
