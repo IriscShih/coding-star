@@ -2,18 +2,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>LET'S LEARN C++ - NEXT STEPS | CODING STAR</title>
+<title>LET'S LEARN C++ - NEXT STEPS PARTI | CODING STAR</title>
 <meta name="description" content="Welcome to C++ learning session! :)">
 <meta name="keywords" content="blogging, c++, start">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/logo.png">
-<meta name="twitter:title" content="Let's Learn C++ - Next steps">
+<meta name="twitter:title" content="Let's Learn C++ - Next steps PartI">
 <meta name="twitter:description" content="Welcome to C++ learning session! :)">
 <meta name="twitter:creator" content="@david_dao_">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Let's Learn C++ - Next steps">
+<meta property="og:title" content="Let's Learn C++ - Next steps PartI">
 <meta property="og:description" content="Welcome to C++ learning session! :)">
 <meta property="og:url" content="/c++/Next-Steps-part1">
 <meta property="og:site_name" content="Coding Star">
@@ -89,7 +89,7 @@
 <div class="summer-post-title-simple row">
 <div class="small-12 columns">
 <div class=summer-post-meta-simple>
-<h1 itemprop=name><i class="fa fa-star-half-o fa-spin"></i>&nbsp;Let's Learn C++ - Next steps</h1>
+<h1 itemprop=name><i class="fa fa-star-half-o fa-spin"></i>&nbsp;Let's Learn C++ - Next steps PartI</h1>
 <p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name> Iris Shih</strong></span> &#8212; on <span itemprop=articleSection><a href="/tags/index.html#blogging" title="Posts tagged with blogging" rel=tag>blogging</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#c++" title="Posts tagged with c++" rel=tag>c++</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#start" title="Posts tagged with start" rel=tag>start</a></span> <strong><time datetime="2014-09-04T00:00:00+02:00" itemprop=datePublished>04 Sep 2014</time></strong></p>
 <strong><i>&quot;Welcome to C++ learning session! :)&quot;</i></strong>
 </div>
@@ -318,10 +318,14 @@ Our focus in this module will be on using pointers, and getting started with obj
       <li>In this case, we are not passing a copy of its value, we are passing the address of the variable to the function. </li>
       <li>Any modificaton that we do to the local variable actually modifies the orginal variable passed in. 
 <br />  <br />
-<br />
-If you are a C programmer, this is a new twist. </li>
+<br /></li>
     </ul>
   </li>
+</ul>
+
+<p>If you are a C programmer, this is a new twist. </p>
+
+<ul>
   <li>We could do the same in C by 
     <ul>
       <li>declaring <strong>Duplicate()</strong> as <strong>Duplicate(int *x)</strong>, in which case x is a pointer to an int</li>
@@ -382,12 +386,81 @@ If you are a C programmer, this is a new twist. </li>
 
 <hr />
 
+<p>Run the program to see whether you got the correct answer or not! ;)</p>
+
+<h4 id="example-3--passing-values-by-reference">Example 3 : Passing Values by Reference</h4>
+
+<p>Write a function called <strong>accelerate()</strong> that takes as input the speed of a vehicle, and an amout. </p>
+
+<ul>
+  <li>The function adds the amount to the speed to accelerate the vehicle. </li>
+  <li>The speed parameter should be passed by refernece, and amount by value.</li>
+  <li><a href="">Click Here</a> for the solution!</li>
+</ul>
+
+<h4 id="example-4--classes-and-objects">Example 4 : Classes and Objects</h4>
+
+<p>Consider the following class:</p>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// time.cpp, Iris Shih</span>
+<span class="c1">// Description: A simple time class.</span>
+
+<span class="cp">#include &lt;iostream&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Time</span> <span class="p">{</span>
+ <span class="k">private</span><span class="o">:</span>
+ <span class="kt">int</span> <span class="n">hours_</span><span class="p">;</span>
+ <span class="kt">int</span> <span class="n">minutes_</span><span class="p">;</span>
+ <span class="kt">int</span> <span class="n">seconds_</span><span class="p">;</span>
+ <span class="k">public</span><span class="o">:</span>
+ <span class="kt">void</span> <span class="n">set</span><span class="p">(</span><span class="kt">int</span> <span class="n">h</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span><span class="n">hours_</span> <span class="o">=</span> <span class="n">h</span><span class="p">;</span> <span class="n">minutes_</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span> <span class="n">seconds_</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span> <span class="k">return</span><span class="p">;}</span>
+ <span class="kt">void</span> <span class="n">increment</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+ <span class="kt">void</span> <span class="nf">display</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="n">Time</span><span class="o">::</span><span class="n">increment</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">seconds_</span><span class="o">++</span><span class="p">;</span>
+ <span class="n">minutes_</span> <span class="o">+=</span> <span class="n">seconds_</span><span class="o">/</span><span class="mi">60</span><span class="p">;</span>
+ <span class="n">hours_</span> <span class="o">+=</span> <span class="n">minutes_</span><span class="o">/</span><span class="mi">60</span><span class="p">;</span>
+ <span class="n">seconds_</span> <span class="o">%=</span> <span class="mi">60</span><span class="p">;</span>
+ <span class="n">minutes_</span> <span class="o">%=</span> <span class="mi">60</span><span class="p">;</span>
+ <span class="n">hours_</span> <span class="o">%=</span> <span class="mi">24</span><span class="p">;</span>
+ <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">Time</span><span class="o">::</span><span class="n">display</span><span class="p">()</span> <span class="p">{</span>
+ <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">hours_</span> <span class="o">%</span> <span class="mi">12</span> <span class="o">?</span> <span class="n">hours_</span> <span class="o">%</span> <span class="mi">12</span><span class="o">:</span><span class="mi">12</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;:&#39;</span> <span class="o">&lt;&lt;</span>
+ <span class="p">(</span><span class="n">minutes_</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="o">?</span> <span class="s">&quot;0&quot;</span> <span class="o">:</span><span class="s">&quot;&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">minutes_</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;:&#39;</span> <span class="o">&lt;&lt;</span>
+ <span class="p">(</span><span class="n">seconds_</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="o">?</span> <span class="s">&quot;0&quot;</span> <span class="o">:</span><span class="s">&quot;&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">seconds_</span> <span class="o">&lt;&lt;</span>
+ <span class="p">(</span><span class="n">hours_</span> <span class="o">&lt;</span> <span class="mi">12</span> <span class="o">?</span> <span class="s">&quot; AM&quot;</span> <span class="o">:</span> <span class="s">&quot; PM&quot;</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">Time</span> <span class="n">timer</span><span class="p">;</span> <span class="n">timer</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="mi">59</span><span class="p">,</span><span class="mi">58</span><span class="p">);</span>
+ <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+ <span class="n">timer</span><span class="p">.</span><span class="n">increment</span><span class="p">();</span>
+ <span class="n">timer</span><span class="p">.</span><span class="n">display</span><span class="p">();</span>
+ <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+ <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<hr />
+
+<blockquote>
+  <p><strong>Notice that class member variables have a trailing underscore. This is dont to differentiate between local variables and class variables</strong></p>
+</blockquote>
+
+<p>Add a decrement method to this class! <a href="">Click Here</a> to have a look at the solution. :)</p>
+
 </div>
 </article>
 <div class=cf></div>
 <div class="row text-center">
 <section class="summer-post-share">
-<a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Let's Learn C++ - Next steps&quot;%20/c++/Next-Steps-part1%20via%20&#64;david_dao_" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false" title="Share on Twitter">
+<a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Let's Learn C++ - Next steps PartI&quot;%20/c++/Next-Steps-part1%20via%20&#64;david_dao_" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false" title="Share on Twitter">
 <i class="fa fa-twitter"></i>
 </a>
 <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/c++/Next-Steps-part1" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false" title="Share on Facebook">

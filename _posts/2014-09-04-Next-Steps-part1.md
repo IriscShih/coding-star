@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Let's Learn C++ - Next steps
+title: Let's Learn C++ - Next steps PartI
 description: "Welcome to C++ learning session! :)"
 headline: "Let's Fire up the Engines"
 categories: C++

@@ -41,8 +41,13 @@ callback([
   } ,
 
   {
-    "text": "Let's Learn C++ - Next steps",
+    "text": "Let's Learn C++ - Next steps PartI",
     "href": "/c++/Next-Steps-part1"
+  } ,
+
+  {
+    "text": "Next Steps Part2",
+    "href": "/Next-Steps-part2"
   } 
 
 ])
