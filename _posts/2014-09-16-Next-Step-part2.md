@@ -42,5 +42,5 @@ With an **object-oriented (OO)** approach, we start with the question **"What re
 - The actions might change the state of the object, or they might invoke actions of other objects. 
 - The basic premise is that an object "knows" how to do things by itself. 
 
-In OO design, we define physical objects in terms of classes and objects; attributes and behaviors. There are generally a large number of objects in an OO program. Many of these objects, however, are essentially the same. Consider the following.
+In OO design, we define physical objects in terms of classes and objects; attributes and behaviors. There are generally a large number of objects in an OO program. Many of these objects, however, are essentially the same. Consider the following. <br>
 ![]({{ site.url }}/images/oo.png)
