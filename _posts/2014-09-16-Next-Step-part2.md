@@ -63,3 +63,5 @@ We also need a collection of **Composer objects**.
 - An object of this class can add or retrieve Composer objects, and display individual ones by invoking the display action of a Composer object
 
 Finally, we need some kind of user interface to provide interactive operations on the database. this is placeholder class, i.e. we really don't know what the user interface is going to look like yet, but we do know we will need one. Maybe it will be graphical, maybe text-based. For now, we define a placeholder which we can fill in later.
+
+
