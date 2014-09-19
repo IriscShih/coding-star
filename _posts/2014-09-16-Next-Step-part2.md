@@ -64,4 +64,68 @@ We also need a collection of **Composer objects**.
 
 Finally, we need some kind of user interface to provide interactive operations on the database. this is placeholder class, i.e. we really don't know what the user interface is going to look like yet, but we do know we will need one. Maybe it will be graphical, maybe text-based. For now, we define a placeholder which we can fill in later.
 
+###...NEXT
 
+Now that we have identified the classed for the composer database application, the next step is to define the attributes and actions for classes in a more complex application, we would sit down with pencil and paper or [UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language) or [CRC cards](http://en.wikipedia.org/wiki/Class-responsibility-collaboration_card) or [OOD](http://en.wikipedia.org/wiki/Object-oriented_design) to map out the class hierarchy and how the objects interact.
+
+For our composer database, we define a **Composer class** which contains the relevant data we want to store on each composer. It also contains methods for manipulating ranking, and displaying the data. 
+
+- **Database class** : It needs some kind of structure for holding **Composer objects**. We need to be able to add a new **Composer object** to the structure, as well as retrieve a specific **Composer object**. We'd also like to display all the objects either in order of entry, or by ranking.
+- **User Interface class** : Implements a menu-driven interface, with handlers that call actions in the Database class. 
+
+If the classes are easily understood and their attributes and actions clear, as in the composer application, it's relatively easy to design the classes. But if there are any questions in your mind as to how the classes relate and interact, it's best to draw it out first, and work through the details before starting to code.
+
+Once we have a clear picture of the design and have evaluated it (more on this soon), we define the interface for each class. We don't worry about implementation details at this point - just what are the attributes and actions, and what parts of a class' state and actions are available to other classes.
+
+In C++, we normally do this by defining a **header file** for each class. The **Composer class** has private data members for all the data we want to store on a composer. We need **accessors (“get” methods)** and **mutators (“set” methods)**, as well as the primary actions for the class.
+
+----------------------------------------------
+{% highlight c++%}
+// composer.h, Iris Shih
+// Description: The class for a Composer record.
+// The default ranking is 10 which is the lowest possible.
+// Notice we use const in C++ instead of #define.
+const int kDefaultRanking = 10;
+
+class Composer {
+ public:
+ // Constructor
+ Composer();
+ // Here is the destructor which has the same name as the class
+ // and is preceded by ~. It is called when an object is destroyed
+ // either by deletion, or when the object is on the stack and
+ // the method ends.
+ ~Composer();
+
+ // Accessors and Mutators
+ void set_first_name(string in_first_name);
+ string first_name();
+ void set_last_name(string in_last_name);
+ string last_name();
+ void set_composer_yob(int in_composer_yob);
+ int composer_yob();
+ void set_composer_genre(string in_composer_genre);
+ string composer_genre();
+ void set_ranking(int in_ranking);
+ int ranking();
+ void set_fact(string in_fact);
+ string fact();
+
+ // Methods
+ // This method increases a composer's rank by increment.
+ void Promote(int increment);
+ // This method decreases a composer's rank by decrement.
+ void Demote(int decrement);
+ // This method displays all the attributes of a composer.
+ void Display();
+
+ private:
+ string first_name_;
+ string last_name_;
+ int composer_yob_; // year of birth
+ string composer_genre_; // baroque, classical, romantic, etc.
+ string fact_;
+ int ranking_;
+};
+{% endhighlight %}
+----------------------------------------------
