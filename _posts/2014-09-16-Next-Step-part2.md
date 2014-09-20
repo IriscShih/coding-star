@@ -129,3 +129,47 @@ class Composer {
 };
 {% endhighlight %}
 ----------------------------------------------
+
+The **Database class** is straight-forward as well.
+
+----------------------------------------------
+{% highlight c++%}
+// database.h, Iris Shih
+// Description: Class for a database of Composer records.
+#include  <iostream>
+#include "Composer.h"
+
+// Our database holds 100 composers, and no more.
+const int kMaxComposers = 100;
+
+class Database {
+ public:
+ Database();
+ ~Database();
+
+ // Add a new composer using operations in the Composer class.
+ // For convenience, we return a reference (pointer) to the new record.
+ Composer& AddComposer(string in_first_name, string in_last_name, string in_genre, int in_yob, string in_fact);
+ // Search for a composer based on last name. Return a reference to the
+ // found record.
+ Composer& GetComposer(string in_last_name);
+ // Display all composers in the database.
+ void DisplayAll();
+ // Sort database records by rank and then display all.
+ void DisplayByRank();
+
+ private:
+ // Store the individual records in an array.
+ Composer composers_[kMaxComposers];
+ // Track the next slot in the array to place a new record.
+ int next_slot_;
+};
+{% endhighlight %}
+----------------------------------------------
+
+Notice how we have carefully encapsulated the composer-specific data in a seperate class. We could have put a stuct or class in the **Database class** to represent the Composer record, and accessed it diredted there. But that would be **"under-objectification"**, i.e. we are not modeling with objects as much as we could.
+
+You'll see as you start to work on the implementation of the **Composer & Database classes**, that it is much cleaner to have a seperate Composer class. In particular, having seperate atomic operations on a Composer object greatly simplify the implementation of the **Display()** methods in the Database class.
+
+Of course, there is also such a thing as **"over-objectification"** where we try and make everything a class, or we have more classes than we need. It takes practice to find the right balance, and you'll find that individual programmers will have differing opinions. 
+
