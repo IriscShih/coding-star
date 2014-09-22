@@ -173,3 +173,13 @@ You'll see as you start to work on the implementation of the **Composer & Databa
 
 Of course, there is also such a thing as **"over-objectification"** where we try and make everything a class, or we have more classes than we need. It takes practice to find the right balance, and you'll find that individual programmers will have differing opinions. 
 
+Determining if you are **over- or under- objectufying** can often be sorted out by carefully diagramming your classes. As mentioned earlier, it's important to work out a class design before you start coding and this can help you analyze your apporach. A common notation used for this purpose is [UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language). Now that we have the classes defined for the **Composer & Database objects**, we need an interface that allows the user to interact with the database. A simple menu will do the trick:
+
+        Composer Database
+        ---------------------------------------------
+        1) Add a new composer
+        2) Retrieve a composer's data
+        3) Promote/demote a composer's rank
+        4) List all composers
+        5) List all composers by rank
+        0) Quit
