@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>LET'S LEARN C++ - NEXT STEPS PARTII | CODING STAR</title>
+<meta name="description" content="Welcome to C++ learning session! :)">
+<meta name="keywords" content="blogging, c++, start">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:title" content="Let's Learn C++ - Next steps PartII">
+<meta name="twitter:description" content="Welcome to C++ learning session! :)">
+<meta name="twitter:creator" content="@david_dao_">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Let's Learn C++ - Next steps PartII">
+<meta property="og:description" content="Welcome to C++ learning session! :)">
+<meta property="og:url" content="/c++/Next-Step-part2">
+<meta property="og:site_name" content="Coding Star">
+<meta property="og:image" content="/images/">
+
+
+
+<link rel="canonical" href="/c++/Next-Step-part2">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Coding Star Feed">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/css/vendor/normalize-production.css">
+<link rel="stylesheet" href="/assets/css/vendor/foundation.min.css">
+
+<link rel="stylesheet" href="/assets/css/style-production.css">
+<link rel="stylesheet" href="/assets/css/post-production.css">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>/*<![CDATA[*/window.jQuery||document.write('<script src="/assets/js/vendor/jquery-1.11.1.min.js"><\/script>');/*]]>*/</script>
+
+
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+<body class=post-template itemscope itemtype=http://schema.org/WebPage>
+
+<main id=summer-post-container-simple class=summer-post-container-simple role=main itemscope itemtype=http://schema.org/Article>
+<header class=summer-post-header-simple>
+<div class=summer-post-menu-header-simple>
+
+
+<a class=summer-blog-logo href=""><img src="/images/logo.png" alt="Blog Logo" /></a>
+
+<div class=summer-blog-menu>
+<div class="summer-mobile-menu show-for-small">
+<a href=#><i class="fa fa-bars"></i></a>
+</div>
+<ul class=summer-menu>
+<li class="summer-mobile-close-btn show-for-small text-right">
+<a href=#><i class="fa fa-times"></i></a>
+</li>
+
+<li>
+<a href="/">Home</a>
+ </li>
+
+<li>
+<a href="/featured">Featured Posts</a>
+ </li>
+
+<li>
+<a href="/categories">Categories</a>
+ </li>
+
+<li>
+<a href="/about">About</a>
+ </li>
+
+</ul>
+</div>
+</div>
+
+<div class="summer-post-title-simple row">
+<div class="small-12 columns">
+<div class=summer-post-meta-simple>
+<h1 itemprop=name><i class="fa fa-star-half-o fa-spin"></i>&nbsp;Let's Learn C++ - Next steps PartII</h1>
+<p>by <span itemprop=author itemscope itemtype=http://schema.org/Person><strong itemprop=name> Iris Shih</strong></span> &#8212; on <span itemprop=articleSection><a href="/tags/index.html#blogging" title="Posts tagged with blogging" rel=tag>blogging</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#c++" title="Posts tagged with c++" rel=tag>c++</a></span>&comma;&nbsp;<span itemprop=articleSection><a href="/tags/index.html#start" title="Posts tagged with start" rel=tag>start</a></span> <strong><time datetime="2014-09-16T00:00:00+02:00" itemprop=datePublished>16 Sep 2014</time></strong></p>
+<strong><i>&quot;Welcome to C++ learning session! :)&quot;</i></strong>
+</div>
+</div>
+</div>
+</header>
+
+<article class="summer-post-content post tag-simple" itemscope itemtype=http://schema.org/BlogPosting>
+<div itemprop=articleBody><h3 id="database-project">Database Project</h3>
+
+<p>In this project, we create a fully functional C++ program that implements a simple database application. </p>
+
+<p>Our program will allow us to manage a database od composers and relevant information about them. The features of the program include:</p>
+
+<ul>
+  <li>The ability to add a new composer</li>
+  <li>The ability to rank a composer (i.e. indicate how much we like or dislike the composer’s music)</li>
+  <li>The ability to view all the composers in the database</li>
+  <li>The ability to view all composers by rank</li>
+</ul>
+
+<blockquote>
+  <p>“There are two ways of constructing a software design : One way is to make it so simple that there are obniously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult.” - <a href="http://en.wikipedia.org/wiki/Tony_Hoare">C.A.R. Hoare</a></p>
+</blockquote>
+
+<p>Many of us learned to design and code using a <strong>“procedural”</strong> approach. The central question we begin with is <strong>“What must the program do?”</strong>. </p>
+
+<ul>
+  <li>We decompose the solution to a problem into tasks, each of which solves a part of the problem. </li>
+  <li>These tasks map to functions in our program which are called sequentially from main() or from other functions. - - This step-by-step approach is ideal for some problems we need to solve. But more often than not, our programs are not just linear sequences of tasks or events.</li>
+</ul>
+
+<p>With an <strong>object-oriented (OO)</strong> approach, we start with the question <strong>“What real-world objects am I modeling?”</strong> </p>
+
+<ul>
+  <li>Instead of dividing a program into tasks as described above, we divide it into models of physical objects. </li>
+  <li>These physical objects have a state defined by a set of attributes, and a set of behaviors or actions that they can perform. </li>
+  <li>The actions might change the state of the object, or they might invoke actions of other objects. </li>
+  <li>The basic premise is that an object “knows” how to do things by itself. </li>
+</ul>
+
+<p>In OO design, we define physical objects in terms of classes and objects; attributes and behaviors. There are generally a large number of objects in an OO program. Many of these objects, however, are essentially the same. Consider the following.<br /><br /><img src="/images/oo.png" alt="" /></p>
+
+<p>A class is a set of general attributes and behaviors for an object, which may exist physically in the real world. In the illustration above, we have an Apple class. All apples, regardless of their type, have color and taste attributes. We have also defined a behavior whereby the Apple display its attributes.<br /><img src="/images/oo2.png" alt="" /></p>
+
+<p>In this diagram, we have defined 2 objects which are of the Apple class. Each object has the same attributes and actions as the class, but the object defines the attributes for a specific type of apple. In addition, the <strong>Display</strong> action as the class, but the object defines the attributes for a specifiv type of apple. In addition, the <strong>Display</strong> action displays the attributes for that particular object, e.g. “Green” and “Sour”.</p>
+
+<p>An OO design consists of a set of classes, the data associated with these classes, and the set of actions the classes can perform. Wealso need to identify the ways different classes interact. This interection can be performed bu objets of a class invoking the actions of objects of other classes. For example, we could have a <strong>AppleOutputer</strong> class that outputs the color and taste of an array of Apple objects, by calling the <strong>Display()</strong> method of each Apple object.</p>
+
+<p><strong>Here are the steps we perform in doing OO design:</strong></p>
+
+<ol>
+  <li>Identify the classes, and define in general what an object of each class stores as data and what an object can do.</li>
+  <li>Define the data elements of each class</li>
+  <li>Define the actions of each class and how some actions of one class can be implemented using actions of other related classes. </li>
+</ol>
+
+<p>For a large system, these steps occur iteratively at different levels of detail.</p>
+
+<p>We also need a collection of <strong>Composer objects</strong>. 
+- For this, we define a Database class which manages the individual records.
+- An object of this class can add or retrieve Composer objects, and display individual ones by invoking the display action of a Composer object</p>
+
+<p>Finally, we need some kind of user interface to provide interactive operations on the database. this is placeholder class, i.e. we really don’t know what the user interface is going to look like yet, but we do know we will need one. Maybe it will be graphical, maybe text-based. For now, we define a placeholder which we can fill in later.</p>
+
+<h3 id="next">…NEXT</h3>
+
+<p>Now that we have identified the classed for the composer database application, the next step is to define the attributes and actions for classes in a more complex application, we would sit down with pencil and paper or <a href="http://en.wikipedia.org/wiki/Unified_Modeling_Language">UML</a> or <a href="http://en.wikipedia.org/wiki/Class-responsibility-collaboration_card">CRC cards</a> or <a href="http://en.wikipedia.org/wiki/Object-oriented_design">OOD</a> to map out the class hierarchy and how the objects interact.</p>
+
+<p>For our composer database, we define a <strong>Composer class</strong> which contains the relevant data we want to store on each composer. It also contains methods for manipulating ranking, and displaying the data. </p>
+
+<ul>
+  <li><strong>Database class</strong> : It needs some kind of structure for holding <strong>Composer objects</strong>. We need to be able to add a new <strong>Composer object</strong> to the structure, as well as retrieve a specific <strong>Composer object</strong>. We’d also like to display all the objects either in order of entry, or by ranking.</li>
+  <li><strong>User Interface class</strong> : Implements a menu-driven interface, with handlers that call actions in the Database class. </li>
+</ul>
+
+<p>If the classes are easily understood and their attributes and actions clear, as in the composer application, it’s relatively easy to design the classes. But if there are any questions in your mind as to how the classes relate and interact, it’s best to draw it out first, and work through the details before starting to code.</p>
+
+<p>Once we have a clear picture of the design and have evaluated it (more on this soon), we define the interface for each class. We don’t worry about implementation details at this point - just what are the attributes and actions, and what parts of a class’ state and actions are available to other classes.</p>
+
+<p>In C++, we normally do this by defining a <strong>header file</strong> for each class. The <strong>Composer class</strong> has private data members for all the data we want to store on a composer. We need <strong>accessors (“get” methods)</strong> and <strong>mutators (“set” methods)</strong>, as well as the primary actions for the class.</p>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// composer.h, Iris Shih</span>
+<span class="c1">// Description: The class for a Composer record.</span>
+<span class="c1">// The default ranking is 10 which is the lowest possible.</span>
+<span class="c1">// Notice we use const in C++ instead of #define.</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">kDefaultRanking</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Composer</span> <span class="p">{</span>
+ <span class="k">public</span><span class="o">:</span>
+ <span class="c1">// Constructor</span>
+ <span class="n">Composer</span><span class="p">();</span>
+ <span class="c1">// Here is the destructor which has the same name as the class</span>
+ <span class="c1">// and is preceded by ~. It is called when an object is destroyed</span>
+ <span class="c1">// either by deletion, or when the object is on the stack and</span>
+ <span class="c1">// the method ends.</span>
+ <span class="o">~</span><span class="n">Composer</span><span class="p">();</span>
+
+ <span class="c1">// Accessors and Mutators</span>
+ <span class="kt">void</span> <span class="nf">set_first_name</span><span class="p">(</span><span class="n">string</span> <span class="n">in_first_name</span><span class="p">);</span>
+ <span class="n">string</span> <span class="nf">first_name</span><span class="p">();</span>
+ <span class="kt">void</span> <span class="nf">set_last_name</span><span class="p">(</span><span class="n">string</span> <span class="n">in_last_name</span><span class="p">);</span>
+ <span class="n">string</span> <span class="nf">last_name</span><span class="p">();</span>
+ <span class="kt">void</span> <span class="nf">set_composer_yob</span><span class="p">(</span><span class="kt">int</span> <span class="n">in_composer_yob</span><span class="p">);</span>
+ <span class="kt">int</span> <span class="nf">composer_yob</span><span class="p">();</span>
+ <span class="kt">void</span> <span class="nf">set_composer_genre</span><span class="p">(</span><span class="n">string</span> <span class="n">in_composer_genre</span><span class="p">);</span>
+ <span class="n">string</span> <span class="nf">composer_genre</span><span class="p">();</span>
+ <span class="kt">void</span> <span class="nf">set_ranking</span><span class="p">(</span><span class="kt">int</span> <span class="n">in_ranking</span><span class="p">);</span>
+ <span class="kt">int</span> <span class="nf">ranking</span><span class="p">();</span>
+ <span class="kt">void</span> <span class="nf">set_fact</span><span class="p">(</span><span class="n">string</span> <span class="n">in_fact</span><span class="p">);</span>
+ <span class="n">string</span> <span class="nf">fact</span><span class="p">();</span>
+
+ <span class="c1">// Methods</span>
+ <span class="c1">// This method increases a composer&#39;s rank by increment.</span>
+ <span class="kt">void</span> <span class="nf">Promote</span><span class="p">(</span><span class="kt">int</span> <span class="n">increment</span><span class="p">);</span>
+ <span class="c1">// This method decreases a composer&#39;s rank by decrement.</span>
+ <span class="kt">void</span> <span class="nf">Demote</span><span class="p">(</span><span class="kt">int</span> <span class="n">decrement</span><span class="p">);</span>
+ <span class="c1">// This method displays all the attributes of a composer.</span>
+ <span class="kt">void</span> <span class="nf">Display</span><span class="p">();</span>
+
+ <span class="k">private</span><span class="o">:</span>
+ <span class="n">string</span> <span class="n">first_name_</span><span class="p">;</span>
+ <span class="n">string</span> <span class="n">last_name_</span><span class="p">;</span>
+ <span class="kt">int</span> <span class="n">composer_yob_</span><span class="p">;</span> <span class="c1">// year of birth</span>
+ <span class="n">string</span> <span class="n">composer_genre_</span><span class="p">;</span> <span class="c1">// baroque, classical, romantic, etc.</span>
+ <span class="n">string</span> <span class="n">fact_</span><span class="p">;</span>
+ <span class="kt">int</span> <span class="n">ranking_</span><span class="p">;</span>
+<span class="p">};</span></code></pre></div>
+
+<hr />
+
+<p>The <strong>Database class</strong> is straight-forward as well.</p>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// database.h, Iris Shih</span>
+<span class="c1">// Description: Class for a database of Composer records.</span>
+<span class="cp">#include  &lt;iostream&gt;</span>
+<span class="cp">#include &quot;Composer.h&quot;</span>
+
+<span class="c1">// Our database holds 100 composers, and no more.</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">kMaxComposers</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Database</span> <span class="p">{</span>
+ <span class="k">public</span><span class="o">:</span>
+ <span class="n">Database</span><span class="p">();</span>
+ <span class="o">~</span><span class="n">Database</span><span class="p">();</span>
+
+ <span class="c1">// Add a new composer using operations in the Composer class.</span>
+ <span class="c1">// For convenience, we return a reference (pointer) to the new record.</span>
+ <span class="n">Composer</span><span class="o">&amp;</span> <span class="n">AddComposer</span><span class="p">(</span><span class="n">string</span> <span class="n">in_first_name</span><span class="p">,</span> <span class="n">string</span> <span class="n">in_last_name</span><span class="p">,</span> <span class="n">string</span> <span class="n">in_genre</span><span class="p">,</span> <span class="kt">int</span> <span class="n">in_yob</span><span class="p">,</span> <span class="n">string</span> <span class="n">in_fact</span><span class="p">);</span>
+ <span class="c1">// Search for a composer based on last name. Return a reference to the</span>
+ <span class="c1">// found record.</span>
+ <span class="n">Composer</span><span class="o">&amp;</span> <span class="n">GetComposer</span><span class="p">(</span><span class="n">string</span> <span class="n">in_last_name</span><span class="p">);</span>
+ <span class="c1">// Display all composers in the database.</span>
+ <span class="kt">void</span> <span class="nf">DisplayAll</span><span class="p">();</span>
+ <span class="c1">// Sort database records by rank and then display all.</span>
+ <span class="kt">void</span> <span class="nf">DisplayByRank</span><span class="p">();</span>
+
+ <span class="k">private</span><span class="o">:</span>
+ <span class="c1">// Store the individual records in an array.</span>
+ <span class="n">Composer</span> <span class="n">composers_</span><span class="p">[</span><span class="n">kMaxComposers</span><span class="p">];</span>
+ <span class="c1">// Track the next slot in the array to place a new record.</span>
+ <span class="kt">int</span> <span class="n">next_slot_</span><span class="p">;</span>
+<span class="p">};</span></code></pre></div>
+
+<hr />
+
+<p>Notice how we have carefully encapsulated the composer-specific data in a seperate class. We could have put a stuct or class in the <strong>Database class</strong> to represent the Composer record, and accessed it diredted there. But that would be <strong>“under-objectification”</strong>, i.e. we are not modeling with objects as much as we could.</p>
+
+<p>You’ll see as you start to work on the implementation of the <strong>Composer &amp; Database classes</strong>, that it is much cleaner to have a seperate Composer class. In particular, having seperate atomic operations on a Composer object greatly simplify the implementation of the <strong>Display()</strong> methods in the Database class.</p>
+
+<p>Of course, there is also such a thing as <strong>“over-objectification”</strong> where we try and make everything a class, or we have more classes than we need. It takes practice to find the right balance, and you’ll find that individual programmers will have differing opinions. </p>
+
+<p>Determining if you are <strong>over- or under- objectufying</strong> can often be sorted out by carefully diagramming your classes. As mentioned earlier, it’s important to work out a class design before you start coding and this can help you analyze your apporach. A common notation used for this purpose is <a href="http://en.wikipedia.org/wiki/Unified_Modeling_Language">UML</a>. Now that we have the classes defined for the <strong>Composer &amp; Database objects</strong>, we need an interface that allows the user to interact with the database. A simple menu will do the trick:</p>
+
+<pre><code>    Composer Database
+    ---------------------------------------------
+    1) Add a new composer
+    2) Retrieve a composer's data
+    3) Promote/demote a composer's rank
+    4) List all composers
+    5) List all composers by rank
+    0) Quit
+</code></pre>
+
+</div>
+</article>
+<div class=cf></div>
+<div class="row text-center">
+<section class="summer-post-share">
+<a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Let's Learn C++ - Next steps PartII&quot;%20/c++/Next-Step-part2%20via%20&#64;david_dao_" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false" title="Share on Twitter">
+<i class="fa fa-twitter"></i>
+</a>
+<a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/c++/Next-Step-part2" onclick="window.open(this.href,'facebook-share','width=580,height=296');return false" title="Share on Facebook">
+<i class="fa fa-facebook"></i>
+</a>
+<a class="google-icon" href="https://plus.google.com/share?url=/c++/Next-Step-part2" onclick="window.open(this.href,'google-plus-share','width=490,height=530');return false" title="Share on Google+">
+<i class="fa fa-google-plus"></i>
+</a>
+</section>
+</div>
+<div class=cf></div>
+
+<div class="summer-author-info">
+<div class="row">
+<section class="summer-post-author small-12 columns">
+<img src="/images/irisshih.jpg" class="summer-post-author-avatar" alt="Iris Shih's photo" itemprop="image">
+<span class="author-label">Author</span>
+<h1>Iris Shih</h1>
+<p><a href="mailto:iris.cshih@gmail.com" class="author-website">iris.cshih@gmail.com</a></p>
+<p>Master of Informatics student in Technical University Munich, major in computer vision and biomedical computing. I am facinated in data visualization, imaging processing and machine learning.</p>
+</section>
+</div>
+</div>
+<div class=cf></div>
+
+<div class=cf></div>
+<footer class="summer-site-footer">
+<div class="copyright">
+<section>All content copyright <a href="/about">Iris Shih</a> &copy; 2014 &bull; All rights reserved.</section>
+<section>Proudly published with <a class="icon-ghost" href="https://jekyllrb.com/">Jekyll</a></section>
+</div>
+<div class="social-icons">
+
+<a href="http://twitter.com/iriscshih">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+</a>
+
+
+
+
+<a href="http://github.com/IriscShih">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-github fa-stack-1x"></i>
+</span>
+</a>
+
+
+<a href="http://facebook.com/iriscShih">
+<span class="fa-stack fa-lg">
+<i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+<i class="fa fa-facebook fa-stack-1x"></i>
+</span>
+</a>
+
+</div>
+<div class="cf"></div>
+</footer>
+    
+</main>
+<script>var twitterAccount="hmfaysal";</script>
+<div class="shareTooltip" id="shareTooltip">
+<div class="tooltipContainer"><a id="sendToTwitter" href="" class="sharingLink twitter"><span></span></a></div>
+</div>
+<script>!function(f,a,g){var e,b=f.getElementsByTagName(a)[0],c=/^http:/.test(f.location)?"http":"https";if(!f.getElementById(g)){e=f.createElement(a);e.id=g;e.src=c+"://platform.twitter.com/widgets.js";b.parentNode.insertBefore(e,b)}}(document,"script","twitter-wjs");</script>
+<script src="/assets/js/vendor/modernizr.js"></script>
+<script src="/assets/js/foundation.min.js"></script>
+
+<script src="/assets/js/summer.js"></script>
+<script src="/assets/js/scripts.min.js"></script>
+<script src="/assets/js/vendor/selectshare.js"></script>
+<script type='text/javascript'>$(document).foundation();</script>
+<script type='text/javascript'>$(document).ready(function(){$(".time").text(function(a,b){return Math.round(parseFloat(b))})});</script>
+
+</body>
+</html>

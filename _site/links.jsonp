@@ -46,8 +46,13 @@ callback([
   } ,
 
   {
-    "text": "Next Steps Part2",
-    "href": "/Next-Steps-part2"
+    "text": "Let's Learn C++ - Next steps PartII",
+    "href": "/c++/Next-Step-part2"
+  } ,
+
+  {
+    "text": "EPnP: An Accurate O(n) Solution to the PnP Problem",
+    "href": "/paper-review/EPnP"
   } 
 
 ])

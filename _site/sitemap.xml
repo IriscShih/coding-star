@@ -49,10 +49,18 @@
         <loc>/page2/index.html</loc>
     </url>
     
+    <url>
+        <loc>/page3/index.html</loc>
+    </url>
+    
 
     
     <url>
-        <loc>/Next-Steps-part2</loc>
+        <loc>/paper-review/EPnP</loc>
+    </url>
+    
+    <url>
+        <loc>/c++/Next-Step-part2</loc>
     </url>
     
     <url>
