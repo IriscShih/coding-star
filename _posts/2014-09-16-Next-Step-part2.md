@@ -183,3 +183,15 @@ Determining if you are **over- or under- objectufying** can often be sorted out 
         4) List all composers
         5) List all composers by rank
         0) Quit
+
+Use the methods you defined in the **Database class** to implement the user interface. Make your method **erro-proof**. For example, a ranking should always be in the range 1-10. Don't let anyone add 101 composer either, unless you plan to change the data structure in the Database class.
+
+**Remember -** all your code needs to follow the coding conventions, which are repeated here for your convenience.
+
+- Every program we write begins with a header comment, providing the name of the author, their contant information, a short description, and usage. Every function/method begins with a comment on operation and usage.
+- Add **explanatory comments** using full sentences, whenever the code does not document itself, for example, if the processing is tricky, non-obvious, interesting, or important.
+- Always use **descriptive names**: 
+    - variables are lower-case words separated by_, as in my_variable. 
+    - Function/method names use upper-case letter to make words, as in MyExistingFunction().
+    - Constants start with a "k" and use upper-case letters to make words, as in kDaysInWeek.
+- Indentation is in multiple of two. The first level is two spaces; if further indentation is needed, we use four spaces, six spaces, etc.
