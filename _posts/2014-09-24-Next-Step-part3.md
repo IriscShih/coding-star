@@ -34,6 +34,7 @@ The second tool used in industrial software engineering is **Configuration Manag
 The technical manual is stored on a computer that both Bob and Susan can access. Without any CM tool or process in place, a number of problems could arise. 
 
 - One possible scenario is the computer storing the document might be set up so that Bob and Susan can not both work on the manual at the same time. This would slow them down considerably.
+
 - A more dangerous situation arises when the storage computer does allow the document to be opened by both Bob and Susan at the same time. Here is what could happen:
 
     - Bob opens the document on his computer and works on his section.
