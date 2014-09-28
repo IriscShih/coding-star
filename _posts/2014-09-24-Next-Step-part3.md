@@ -42,3 +42,5 @@ The technical manual is stored on a computer that both Bob and Susan can access.
 
 This illustration shows the problem that can occur if there are no controls on the singel copy of the technical manual. When Susan saves her changes, she overwirtes those made by Bob.
 
+<br>![]({{ site.url }}/images/CM.png)
+
