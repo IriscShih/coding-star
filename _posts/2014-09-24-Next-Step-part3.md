@@ -39,8 +39,9 @@ The technical manual is stored on a computer that both Bob and Susan can access.
     - Susan opens the document on her computer and works on her section.
     - Bob completes his changes and saves the document on the storage computer.
     - Susan completes her changes and saves the document on the storage computer.
+<br>![]({{ site.url }}/images/CM.png)
 
 This illustration shows the problem that can occur if there are no controls on the singel copy of the technical manual. When Susan saves her changes, she overwirtes those made by Bob.
 
-<br>![]({{ site.url }}/images/CM.png)
+And this is exactly the type of situation that a CM system can control. With a CM system, both Bob and Susan "Check out" their own copy of the technical manual and work on them. When Bob checks his changes back in, the system knows that Susan has her own copy checked out. When Susan checks in her copy, the system analyzes the changes that both Bob and Susan made and creates a new version that merges the two sets of changes together. 
 
