@@ -45,3 +45,17 @@ This illustration shows the problem that can occur if there are no controls on t
 
 And this is exactly the type of situation that a CM system can control. With a CM system, both Bob and Susan "Check out" their own copy of the technical manual and work on them. When Bob checks his changes back in, the system knows that Susan has her own copy checked out. When Susan checks in her copy, the system analyzes the changes that both Bob and Susan made and creates a new version that merges the two sets of changes together. 
 
+**CM systems** have a number of features beyond managing concurrent changes as described above. Many systems store archives of all versions of a document, from the first time it was created. In the case of a technical manual, this can be very helpful when a user has an old version of the manual and is asking a tech writer questions. A CM system would allow the tech writer to access the old version and be able to see what the user is seeing.
+
+**CM systems** are especially useful in controlling changes made to software. Such systems are called Software Configuration Management (SCM) systems. If you consider the huge number of individual source code files in a large software engineering organization and the huge number of engineers who must make changes to them, it's clear that an SCM system is critical.
+
+###Software Configuration Management
+
+SCM systems are based on a simple idea: the definitive copies of your files are kept in a central repository. People check out copies of files from the repository, work on those copies, and then check them back in when they are finished. SCM systems manage and track revisions by multiple people against a single master set. 
+
+All SCM systems provide the following essential features:
+
+- Concurrency Management
+- Versioning
+- Synchronization
+- Let's look at each of these features in more detail.
